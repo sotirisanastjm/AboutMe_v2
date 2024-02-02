@@ -1,0 +1,26 @@
+.heroBtn {
+    @apply text-xl font-bold flex justify-center items-center cursor-pointer dark:bg-blue-light bg-blue-dark dark:outline-[#DDE6ED] ; 
+    padding: 10px 15px;
+    gap: 15px;
+    outline: 3px #526D82 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    transition: 400ms;
+}
+
+.heroBtn .text {
+    @apply dark:text-blue-black text-white;
+    transition: 400ms;
+}
+
+.heroBtn:hover {
+    @apply dark:bg-dark-blue;
+    background-color: transparent;
+}
+
+.heroBtn:hover .text {
+    @apply text-blue-dark dark:text-blue-light;
+}
+
+  

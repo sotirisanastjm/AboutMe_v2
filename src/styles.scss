@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '../src/assets/shared/all.scss';
+
+body{
+    @apply bg-white text-black;
+    p{
+        @apply text-[#526D82];
+    }
+    h1,h2,h3,h4{
+        @apply text-blue-black;
+    }
+    section{
+        @apply mb-24;
+    }
+
+    &.dark{
+        @apply bg-dark-blue text-white;
+        p{
+            @apply text-[#929AAB];
+        }
+        h1,h2,h3,h4{
+            @apply text-blue-light;
+        }
+    }
+
+    @screen md{
+        section{
+            @apply mb-40;
+        }
+    }
+}

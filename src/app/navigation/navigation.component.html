@@ -1,0 +1,66 @@
+<nav>
+    <div class="dark:bg-[#27374D] bg-[#DDE6ED]">
+        <div class="flex flex-row items-center p-4 justify-between container mx-auto">
+            <div>
+                <!-- Logo -->
+                <a routerLink="/home">
+                    <div><!-- class="border-2 rounded-3xl dark:border-blue-bright border-blue-dark w-fit p-1" -->
+                        <div class="flex flex-row font-black text-xl">
+                            <div class="dark:text-blue-bright text-blue-dark self-center">ANAST</div>
+                            <div class="border rounded-3xl ml-1 px-1 dark:border-blue-bright border-blue-dark dark:bg-blue-bright bg-blue-dark text-white">.dev</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+<!-- Nav -->
+            <div class="md:block hidden">
+                <ul class="md:flex md:space-x-8 uppercase font-black text-xl text-blue-dark dark:text-blue-bright">
+                  <li><a class="textNav textShadow" routerLink="/home">Home</a></li>
+                  <li><a class="textNav textShadow" routerLink="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:block hidden">
+                <label class="darkSwitch">
+                    <input (change)="toggleDarkMode()" type="checkbox">
+                    <span class="switchSlider"></span>
+                </label>
+            </div>
+            <!-- <div>
+                <button (click)="toggleDarkMode()" class="md:block hidden rounded-3xl border-2 dark:border-blue-bright border-blue-dark"><div class="uppercase duration-100 font-black text-xs text-blue-dark rounded-3xl dark:text-white dark:bg-blue-bright pb-[2px] px-[4px] m-1">{{ isDarkMode ? '>_Light' : '>_Dark' }}</div></button>
+            </div> -->
+            <a (click)="toggleMenu()" class="md:hidden block">
+                <span [ngClass]="{'rotate-45 origin-bottom-left ease-linear duration-200 ': menuState === 'open','origin-top-left ease-linear duration-100': menuState === 'closed'}" class="block w-8 h-1 bg-blue-dark dark:bg-blue-bright"></span>
+                <span [ngClass]="{'opacity-0 duration-100': menuState === 'open','opacity-1 duration-100': menuState === 'closed'}" class="mt-2 block w-8 h-1 bg-blue-dark dark:bg-blue-bright"></span>
+                <span [ngClass]="{'-rotate-45 origin-top-left ease-linear duration-200': menuState === 'open', ' origin-bottom-left ease-linear duration-100': menuState === 'closed'}" class="mt-2 block w-8 h-1 bg-blue-dark dark:bg-blue-bright"></span>
+            </a>
+        </div>
+    </div>
+    
+<!-- Mobile Menu Slide -->
+
+    <!-- <div [ngClass]="{'translate-x-0': menuState === 'open', 'translate-x-[200%]': menuState === 'closed'}" class=" transform transition-transform ease-in-out duration-300 fixed bottom-0 left-0 h-[90%] w-[50%] bg-[#DDE6ED] bg-opacity-30 z-50 "></div> -->
+    <div [ngClass]="{'translate-x-0': menuState === 'open', 'translate-x-full': menuState === 'closed'}" class="md:hidden fixed  right-0 h-[98%] w-[100%] dark:bg-[#1a2536] bg-[#CED8E5] transform transition-transform ease-in-out duration-300 z-50">
+        <div class="flex flex-col justify-evenly text-center items-center h-full">
+            <div class="h-[60%]">
+                <ul class="space-y-10 uppercase font-black text-3xl text-blue-dark dark:text-blue-bright">
+                  <li><a class="textNav textShadow" routerLink="/home">Home</a></li>
+                  <li><a class="textNav textShadow" routerLink="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <app-media></app-media>
+            </div>
+            <label class="darkSwitch">
+                <input (change)="toggleDarkMode()" type="checkbox">
+                <span class="switchSlider"></span>
+            </label>
+            <!-- <div>
+                <button (click)="toggleDarkMode()" class=" rounded-3xl border-2 dark:border-blue-bright border-blue-dark"><div class="uppercase rounded-3xl font-black text-xs text-blue-dark dark:text-white dark:bg-blue-bright pb-[2px] px-[4px] m-1">{{ isDarkMode ? '>_Light' : '>_Dark' }}</div></button>
+            </div> -->
+        </div>
+    </div>
+
+</nav>
+  
+  
