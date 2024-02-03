@@ -19,6 +19,7 @@ export class NavigationComponent {
     var body = document.body;
     this.isDarkMode = !this.isDarkMode;
     body.classList.toggle('dark');
+    this.toggleMenu();
   }
   
 }

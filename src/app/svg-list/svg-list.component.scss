@@ -1,0 +1,6 @@
+.techSvg svg{
+    width: 30px;
+    @screen md{
+        width: 50px;
+    }
+}

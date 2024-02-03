@@ -11,6 +11,8 @@ import { HeroImageComponent } from './hero-image/hero-image.component';
 import { HorizonHeaderComponent } from './horizon-header/horizon-header.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TechSkillsComponent } from './tech-skills/tech-skills.component';
+import { SvgListComponent } from './svg-list/svg-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TechSkillsComponent } from './tech-skills/tech-skills.component';
     HeroImageComponent,
     HorizonHeaderComponent,
     TestimonialComponent,
-    TechSkillsComponent
+    TechSkillsComponent,
+    SvgListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

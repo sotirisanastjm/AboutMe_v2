@@ -23,4 +23,56 @@
     @apply text-blue-dark dark:text-blue-light;
 }
 
+
+
+
+//Tool Tip
+.tooltip {
+    @apply relative inline-block cursor-pointer;
+  }
+  
+  .tooltip svg {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+  }
+  
+  .tooltip svg:hover {
+    transform: scale(1.1);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltiptext {
+    @apply dark:text-blue-black text-white dark:bg-blue-light bg-blue-dark font-bold;
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.2s ease-out;
+  }
+  
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    --border-color:#526D82;
+    .dark &{
+        --border-color: #DDE6ED;
+    }
+    border-color: var(--border-color) transparent transparent transparent;
+  }
   

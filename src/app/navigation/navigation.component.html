@@ -44,8 +44,8 @@
         <div class="flex flex-col justify-evenly text-center items-center h-full">
             <div class="h-[60%]">
                 <ul class="space-y-10 uppercase font-black text-3xl text-blue-dark dark:text-blue-bright">
-                  <li><a class="textNav textShadow" routerLink="/home">Home</a></li>
-                  <li><a class="textNav textShadow" routerLink="/contact">Contact</a></li>
+                  <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/home">Home</a></li>
+                  <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/contact">Contact</a></li>
                 </ul>
             </div>
             <div>
