@@ -1,18 +1,10 @@
 <section class="container mx-auto">
     <div class="flex flex-col">
         <h3 class="self-center font-bold text-3xl mb-12">My Skills</h3>
-        <div class="flex md:flex-row flex-col space-y-4 md:space-y-0 justify-center">
-            <div class="mx-4 space-x-6 md:space-x-14 flex flex-row justify-center">
-                <div class="tooltip" *ngFor="let skill of skillsList.slice(0, 4)">
-                    <app-svg-list [svg]="skill.svg"></app-svg-list>
-                    <div class="tooltiptext">{{ skill.name }}</div>
-                </div>
-            </div>
-            <div class="mx-4 space-x-6 md:space-x-14 flex flex-row justify-center">
-                <div class="tooltip" *ngFor="let skill of skillsList.slice(4)">
-                    <app-svg-list [svg]="skill.svg"></app-svg-list>
-                    <div class="tooltiptext">{{ skill.name }}</div>
-                </div>
+        <div class="mx-4 gap-4 md:gap-8 grid grid-cols-3 md:grid-cols-9 justify-items-center w-fit self-center">
+            <div class="tooltip" *ngFor="let skill of skillsList">
+                <app-svg-list [svg]="skill.svg"></app-svg-list>
+                <div class="tooltiptext">{{ skill.name }}</div>
             </div>
         </div>
     </div>

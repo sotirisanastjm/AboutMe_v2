@@ -9,12 +9,13 @@ export class TechSkillsComponent {
   skillsList = [
     { name: 'Sitecore', svg: '0' },
     { name: 'Angular', svg: '1' },
-    { name: 'HTML', svg: '2' },
-    { name: 'CSS', svg: '3' },
-    { name: 'TailWindCSS', svg: '4' },
-    { name: 'JavaScript', svg: '5' },
-    { name: 'TypeScript', svg: '6' },
-    { name: 'Sass', svg: '7' },
+    { name: 'React', svg: '2' },
+    { name: 'HTML', svg: '3' },
+    { name: 'CSS', svg: '4' },
+    { name: 'TailWindCSS', svg: '5' },
+    { name: 'JavaScript', svg: '6' },
+    { name: 'TypeScript', svg: '7' },
+    { name: 'Sass', svg: '8' },
 
   ];
 }

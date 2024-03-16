@@ -31,12 +31,12 @@
     @apply relative inline-block cursor-pointer;
   }
   
-  .tooltip svg {
+  .tooltip .techSvg {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s ease-out;
   }
   
-  .tooltip svg:hover {
+  .tooltip .techSvg:hover {
     transform: scale(1.1);
   }
   
