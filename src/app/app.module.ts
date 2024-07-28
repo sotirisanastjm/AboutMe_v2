@@ -13,6 +13,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TechSkillsComponent } from './tech-skills/tech-skills.component';
 import { SvgListComponent } from './svg-list/svg-list.component';
 import { FooterComponent } from './footer/footer.component';
+import { BannerProductComponent } from './banner-product/banner-product.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     TestimonialComponent,
     TechSkillsComponent,
     SvgListComponent,
-    FooterComponent
+    FooterComponent,
+    BannerProductComponent
   ],
   imports: [
     BrowserModule,
