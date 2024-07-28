@@ -1,5 +1,5 @@
 .heroBtn {
-    @apply text-xl font-bold flex justify-center items-center cursor-pointer dark:bg-blue-light bg-blue-dark dark:outline-[#DDE6ED] ; 
+    @apply text-xl font-bold flex justify-center items-center cursor-pointer dark:bg-blue-300 bg-blue-700 dark:outline-[#DDE6ED] ; 
     padding: 10px 15px;
     gap: 15px;
     outline: 3px #526D82 solid;
@@ -10,7 +10,7 @@
 }
 
 .heroBtn .text {
-    @apply dark:text-blue-black text-white;
+    @apply dark:text-blue-900 text-white;
     transition: 400ms;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .heroBtn:hover .text {
-    @apply text-blue-dark dark:text-blue-light;
+    @apply text-blue-700 dark:text-blue-300;
 }
 
 
@@ -46,7 +46,7 @@
   }
   
   .tooltiptext {
-    @apply dark:text-blue-black text-white dark:bg-blue-light bg-blue-dark font-bold;
+    @apply dark:text-blue-900 text-white dark:bg-blue-300 bg-blue-700 font-bold;
     visibility: hidden;
     width: 160px;
     text-align: center;
