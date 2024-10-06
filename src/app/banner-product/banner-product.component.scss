@@ -1,0 +1,52 @@
+.projectCard:hover{
+    
+    .projectOut{
+        animation: FadeOut 0.2s linear forwards;
+        opacity: 0;
+        display: hidden;
+    }
+
+    .projectIn{
+        animation: FadeIn 0.4s linear forwards;
+        opacity: 1;
+        display: block;
+    }
+    
+}
+
+.projectCard:not(:hover){
+    
+    .projectOut{
+        animation: FadeIn 0.3s linear backwards;
+        
+    }
+
+    .projectIn{
+        animation: FadeOut 0.3s linear backwards;
+        opacity: 0;
+        display: hidden;
+    }
+    
+}
+
+@keyframes FadeOut{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

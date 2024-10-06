@@ -38,31 +38,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.link-text:before{
-  @apply block absolute left-0 w-0 bottom-[-4px] h-[2px] ;
-  content: '';
-  background: #526D82;
-  transition: all 0.3s ease-in-out;
-}
-
-.link-text:hover {
- background-position: 0;
-}
-
-.link-text:hover::before{
-  @apply w-full;
-}
-
-.link-text svg {
-  fill: none;
-  stroke-width: 1.5;
-  transition: all 0.3s ease-in-out;
-}
-
-.link-text:hover svg {
-  stroke: #526D82;
-}
-
 //Tool Tip
 .tooltip {
     @apply relative inline-block cursor-pointer;
