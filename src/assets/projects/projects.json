@@ -1,0 +1,15 @@
+[
+    {
+      "id": "1",
+      "url":"https://quantumgiz.netlify.app/",
+      "name": "QuantumGiz",
+      "description": "A Tech Eshop focused on delivering a seamless, mobile-friendly user experience, showcasing skills in modern web development.",
+      "logoUrl": "../../assets/images/QuantumGiz.png",
+      "onlyLogo": false,
+      "cardImage" : "../../assets/images/ShopNow.jpg",
+      "alt": "QuantumGiz e-Commerce Project",
+      "svgIds": ["2", "5", "6"],
+      "heroImage": "../../assets/images/hero-image-quantumgiz.jpg"
+    }
+  ]
+  

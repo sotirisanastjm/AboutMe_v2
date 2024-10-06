@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { TechSkillsComponent } from './tech-skills/tech-skills.component';
 import { SvgListComponent } from './svg-list/svg-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerProductComponent } from './banner-product/banner-product.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectItemComponent } from './projects/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { BannerProductComponent } from './banner-product/banner-product.componen
     TechSkillsComponent,
     SvgListComponent,
     FooterComponent,
-    BannerProductComponent
+    BannerProductComponent,
+    ProjectsComponent,
+    ProjectItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
