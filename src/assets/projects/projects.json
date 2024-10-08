@@ -9,7 +9,25 @@
       "cardImage" : "../../assets/images/ShopNow.jpg",
       "alt": "QuantumGiz e-Commerce Project",
       "svgIds": ["2", "5", "6"],
-      "heroImage": "../../assets/images/hero-image-quantumgiz.jpg"
+      "heroImage": "../../assets/images/hero-image-quantumgiz.jpg",
+      "actionCards": [
+        {
+          "title": "Optimized for All Screen Sizes",
+          "description": "QuantumGiz is designed with a mobile-first approach, ensuring a seamless experience across all devices. The layout adapts effortlessly to smartphones, tablets, and desktops, providing an engaging interface regardless of screen size.",
+          "image": "../../assets/images/action1.jpg"
+        },
+        {
+          "title": "Dynamic Shopping Cart & Gallery",
+          "description": "Built an intuitive shopping cart that allows real-time updates and a user-friendly product gallery. Users can easily browse items, apply filters, and track their selections in a streamlined manner, demonstrating a functional online shopping experience without actual payments.",
+          "image": "../../assets/images/action1.jpg"
+        },
+        {
+          "title": "Wild Card Product Display & Recommendations",
+          "description": "Implemented a wild card feature for showcasing products, enabling a clean and organized layout that highlights various items. This card also includes recommendation sliders that suggest similar products, enhancing user engagement by presenting tailored options based on browsing behavior.",
+          "image": "../../assets/images/action1.jpg"
+        }
+        
+      ]
     }
   ]
   
