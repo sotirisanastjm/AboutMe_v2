@@ -1,13 +1,13 @@
 <div class="h-[600px] relative" *ngIf="project && project.heroImage">
     <img class="h-[600px] w-full object-cover" [src]="project.heroImage" [alt]="project.name + 'Project'"/>
-    <div class="absolute flex w-full h-full items-center inset-0 bg-black/40 backdrop-blur-[6px] z-10">
+    <div class="absolute flex w-full h-full items-center inset-0 bg-black/60 backdrop-blur-[6px] z-10">
         <div class="sm:w-4/5 md:w-3/5 lg:w-1/2 space-y-4 px-4 md:px-8 lg:px-[120px]">
             <h1 class="text-3xl text-blue-100 lg:text-4xl font-bold">{{project.name}}</h1>
             <p class="text-xl md:text-2xl text-blue-500 font-semibold">{{project.description}}</p>
-            <a [href]="project.url" target="_blank" class="heroBtn sm:w-3/6 mb-6"><div class="text">Explore now!</div></a>
+            <a [href]="project.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">Explore now!</div></a>
         </div>
     </div>
 </div>
-<section *ngIf="project">
+<section *ngIf="project" class="container mx-auto">
 
 </section>

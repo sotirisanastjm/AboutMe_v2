@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-horizon-header',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./horizon-header.component.scss']
 })
 export class HorizonHeaderComponent {
+  @Input() title : string = ''
+  @Input() subtitle : any = ''
 
 }
