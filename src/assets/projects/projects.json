@@ -1,33 +1,60 @@
 [
     {
       "id": "1",
-      "url":"https://quantumgiz.netlify.app/",
+      "link":{
+        "url": "https://quantumgiz.netlify.app/",
+        "text": "Explore now!"
+      },
       "name": "QuantumGiz",
       "description": "A Tech Eshop focused on delivering a seamless, mobile-friendly user experience, showcasing skills in modern web development.",
       "logoUrl": "../../assets/images/QuantumGiz.png",
       "onlyLogo": false,
       "cardImage" : "../../assets/images/ShopNow.jpg",
       "alt": "QuantumGiz e-Commerce Project",
-      "svgIds": ["2", "5", "6"],
+      "svgIds": [
+        {"id": "2", "name": "React"},
+        {"id": "5", "name": "Tailwind"},
+        {"id": "6", "name": "Javascript"}
+      ],
       "heroImage": "../../assets/images/hero-image-quantumgiz.jpg",
-      "actionCards": [
+      "actionCard": {
+        "title": "Ready to Experience QuantumGiz?",
+        "subtitle": "Join us on this exciting journey of seamless shopping."
+      },
+      "infoCards": [
         {
           "title": "Optimized for All Screen Sizes",
           "description": "QuantumGiz is designed with a mobile-first approach, ensuring a seamless experience across all devices. The layout adapts effortlessly to smartphones, tablets, and desktops, providing an engaging interface regardless of screen size.",
-          "image": "../../assets/images/action1.jpg"
+          "svg": "../../assets/svg/responsive.svg",
+          "alt": "responsive design"
         },
         {
           "title": "Dynamic Shopping Cart & Gallery",
           "description": "Built an intuitive shopping cart that allows real-time updates and a user-friendly product gallery. Users can easily browse items, apply filters, and track their selections in a streamlined manner, demonstrating a functional online shopping experience without actual payments.",
-          "image": "../../assets/images/action1.jpg"
+          "svg": "../../assets/svg/add_to_cart.svg",
+          "alt": "intuitive shopping cart that allows real-time updates and a user-friendly product gallery"
         },
         {
           "title": "Wild Card Product Display & Recommendations",
           "description": "Implemented a wild card feature for showcasing products, enabling a clean and organized layout that highlights various items. This card also includes recommendation sliders that suggest similar products, enhancing user engagement by presenting tailored options based on browsing behavior.",
-          "image": "../../assets/images/action1.jpg"
+          "svg": "../../assets/svg/landing.svg",
+          "alt":  "Implemented a wild card feature for showcasing products"
         }
         
+      ],
+      "nextStepTitle":"What's Next for QuantumGiz?",
+      "nextSvg": "../../assets/svg/in-progress.svg",
+      "nextSteps": [
+        {
+          "title": "Implement Smart Search Navigation",
+          "description": "Add a search bar that filters products by name, category, and tags in real-time. Ensure the search results are user-friendly and visually appealing."
+        },
+        {
+          "title": "Create a Wishlist/Favorites List",
+          "description": "Allow users to save their favorite products without creating an account. Utilize local storage to save data temporarily and clear it after a set period."
+        }
       ]
+      
     }
   ]
   

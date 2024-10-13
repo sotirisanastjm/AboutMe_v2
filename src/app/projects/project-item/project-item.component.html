@@ -1,30 +1,55 @@
-<div class="h-[600px] relative" *ngIf="project && project.heroImage">
-    <img class="h-[600px] w-full object-cover" [src]="project.heroImage" [alt]="project.name + 'Project'"/>
+<div class="h-[600px] relative" *ngIf="project && project?.heroImage">
+    <img class="h-[600px] w-full object-cover" [src]="project?.heroImage" [alt]="project?.name + 'Project'"/>
     <div class="absolute flex w-full h-full items-center inset-0 bg-black/60 backdrop-blur-[6px] z-10">
         <div class="sm:w-4/5 md:w-3/5 lg:w-1/2 space-y-4 px-4 md:px-8 lg:px-[120px]">
-            <h1 *ngIf="!project.onlyLogo" class="text-[40px] text-blue-100 lg:text-4xl font-bold flex flex-row gap-1">{{project.name}}<img [src]="project.logoUrl" [alt]="project.alt"/></h1>
-            <p class="text-xl md:text-2xl text-blue-500 font-semibold">{{project.description}}</p>
-            <a [href]="project.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">Explore now!</div></a>
+            <h1 *ngIf="!project?.onlyLogo" class="text-[40px] text-blue-100 lg:text-4xl font-bold flex flex-row gap-1">{{project?.name}}<img [src]="project?.logoUrl" [alt]="project?.alt"/></h1>
+            <p class="text-xl md:text-2xl text-blue-500 font-semibold">{{project?.description}}</p>
+            <a [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
         </div>
     </div>
 </div>
 <section class="container px-4 md:px-0 mx-auto mt-14 lg:mt-24">
-    <h2 class="text-center text-2xl sm:text-3xl mb-6 sm:mb-8 text-blue-800 dark:text-blue-400 font-bold">Built with Modern Web Technologies</h2>
+    <h2 class="text-center text-3xl sm:text-4xl mb-12 text-blue-800 dark:text-blue-400 font-bold">Built with Modern Web Technologies</h2>
     <div *ngIf="project" class="mx-auto w-fit justify-center flex flex-wrap gap-10 lg:gap-14">
-        <ng-container *ngFor="let svg of project.svgIds">
-            <app-svg-list [svg]="svg"></app-svg-list>
-        </ng-container>
+        <div class="tooltip" *ngFor="let svg of project?.svgIds">
+            <app-svg-list [svg]="svg.id"></app-svg-list>
+            <div class="tooltiptext">{{ svg.name }}</div>
+        </div>
     </div>
 </section>
 
-<section class="container mx-auto px-4 md:px-0">
-    <div class="flex flex-col lg:flex-row justify-evenly items-center gap-12 ">
-
-        <div *ngFor="let card of project.actionCards" class="rounded-3xl max-w-[500px] lg:max-w-[300px] gap-4 flex flex-col">
-            <!-- <img class="w-full h-full object-cover" [src]="card.image" [alt]="card.title"/> -->
-            <h3 class="text-xl font-bold h-full">{{card.title}}</h3>
-            <p class="text-lg h-full">{{card.description}}</p>
+<section class="container mx-auto px-4 lg:px-0">
+    <div class="flex flex-col lg:flex-row justify-center gap-12 w-full items-center lg:items-stretch">
+        <div *ngFor="let card of project?.infoCards" class="p-8 bg-blue-100 dark:bg-blue-800 rounded-3xl flex flex-col sm:flex-row lg:flex-col gap-4 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px]">
+            <img class="h-[180px] object-fill" [src]="card?.svg" [alt]="card?.alt"/>
+            <div>
+                <h3 class="text-xl font-bold mb-4">{{ card?.title }}</h3>
+                <p class="text-lg">{{ card?.description }}</p>
+            </div>
         </div>
-
     </div>
+    
+</section>
+
+<section class="dark:bg-blue-900 bg-blue-300 pt-14 pb-14">
+    <div class="container mx-auto">
+        <div class="mx-4 lg:mx-0 flex flex-col lg:flex-row gap-8 justify-center">
+            <div class="space-y-6 w-full lg:w-[40%]">
+                <h3 class="text-2xl sm:text-4xl font-bold">{{project.nextStepTitle}}</h3>
+                <ul class="text-lg text-blue-800 dark:text-blue-100 space-y-6">
+                    <ng-container *ngFor="let step of project.nextSteps">
+                        <li class="flex flex-col gap-2"> <span class="text-xl font-bold">{{step.title}}</span> {{step.description}}</li>
+                    </ng-container>
+                    
+                </ul>
+            </div>
+            <img class="self-center w-[80%] sm:w-[60%] lg:w-[40%]" [src]="project?.nextSvg" [alt]="project?.nextStepTitle"/>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 lg:px-0 flex flex-col justify-center items-center w-fit text-center">
+    <h3 class="text-2xl md:text-4xl font-bold mb-2">{{project?.actionCard.title}}</h3>
+    <p class="text-xl md:text-2xl font-semibold mb-6">{{project?.actionCard.subtitle}}</p>
+    <a [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] w-full sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
 </section>
