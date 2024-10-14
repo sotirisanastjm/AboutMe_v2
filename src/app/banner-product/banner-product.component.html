@@ -16,7 +16,7 @@
             <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project.logoUrl" [alt]="project.alt"/>
             <div class="mx-auto gap-2 flex flex-row justify-center items-center w-fit">
               <ng-container *ngFor="let svg of project.svgIds">
-                <app-svg-list [svg]="svg"></app-svg-list>
+                <app-svg-list [svg]="svg.id"></app-svg-list>
               </ng-container>
             </div>
           </div>

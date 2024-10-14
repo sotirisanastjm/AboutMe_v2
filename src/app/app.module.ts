@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerProductComponent } from './banner-product/banner-product.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectItemComponent } from './projects/project-item/project-item.component';
+import { BannerFocusComponent } from './banner-focus/banner-focus.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProjectItemComponent } from './projects/project-item/project-item.compo
     FooterComponent,
     BannerProductComponent,
     ProjectsComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    BannerFocusComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ body{
         @apply mb-24;
     }
 
+
     &.dark{
         @apply bg-dark-blue text-white;
         p{
@@ -30,5 +31,12 @@ body{
         section{
             @apply mb-40;
         }
+    }
+    --banner-color: #DDE6ED;
+    &.dark{
+        --banner-color: #27374D;
+    }
+    .banner-gradient {
+        background: linear-gradient(to bottom right, var(--banner-color) 40%, transparent 60%);
     }
 }
