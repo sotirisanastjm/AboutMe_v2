@@ -3,7 +3,7 @@
         <div class="flex flex-row items-center p-4 justify-between container mx-auto">
             <div>
                 <!-- Logo -->
-                <a routerLink="/home">
+                <a routerLink="/">
                     <div><!-- class="border-2 rounded-3xl dark:border-blue-500 border-blue-700 w-fit p-1" -->
                         <div class="flex flex-row font-black text-xl">
                             <div class="dark:text-blue-500 text-blue-700 self-center">ANAST</div>
@@ -16,7 +16,7 @@
 <!-- Nav -->
             <div class="md:block hidden">
                 <ul class="md:flex md:space-x-8 uppercase font-black text-xl text-blue-700 dark:text-blue-500">
-                  <li><a class="textNav textShadow" routerLink="/home">Home</a></li>
+                  <li><a class="textNav textShadow" routerLink="/">Home</a></li>
                   <li><a class="textNav textShadow" routerLink="/projects">Projects</a></li>
                   <li><a class="textNav textShadow" routerLink="/contact">Contact</a></li>
                 </ul>
@@ -45,7 +45,7 @@
         <div class="flex flex-col justify-evenly text-center items-center h-full">
             <div class="h-[60%]">
                 <ul class="space-y-10 uppercase font-black text-3xl text-blue-700 dark:text-blue-500">
-                  <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/home">Home</a></li>
+                  <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/">Home</a></li>
                   <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/projects">Projects</a></li>
                   <li><a (click)="toggleMenu()" class="textNav textShadow" routerLink="/contact">Contact</a></li>
                 </ul>
