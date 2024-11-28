@@ -1,0 +1,57 @@
+<section class="container mx-auto mt-32 px-4">
+    <div class="flex flex-col md:flex-row justify-between gap-6">
+        <div class="md:w-2/5 space-y-2 text-center md:text-left">
+            <h2 class="text-2xl sm:text-4xl font-bold flex flex-row items-center justify-center md:justify-normal gap-2">Contact me!
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 md:size-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+              </span>
+            </h2>
+            <p class="text-xl sm:text-2xl font-semibold">Feel free to share your thoughts or ask anything!</p>
+            <img class="self-center h-[200px] md:h-[280px] object-fill mx-auto md:mr-auto md:ml-0" src="../../assets/svg/sent-mail2.svg" alt="Contact Me!"/>      
+        </div>
+        <div class="p-12 md:p-24 md:w-1/2 bg-blue-300 dark:bg-blue-900 rounded-md">
+            <form class="space-y-6" action="https://formsubmit.co/bbbf699b5fbbb0dc729b4dc9b9d86d20" method="POST">
+                <div class="input-field">
+                    <label for="name">Name/Surname</label>
+                    <input [required]="true" type="text" id="name" name="name"/>
+                </div>
+
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input [required]="true" type="email" id="email" name="email"/>
+                </div>
+
+                <div class="input-field">
+                    <label for="message">Message</label>
+                    <textarea #Message (input)="message = Message.value" id="message" name="message" [attr.maxlength]="2000" [rows]="3" [required]="true"></textarea>
+                    <div class="pb-flex flex-row pl-1 md:pl-2">
+                        <span>({{ message.length }}</span>
+                        <span>/2000)</span>
+                    </div>
+                </div>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="{{htmlResponse}}">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://localhost:4200/contact/true">
+                <button type="submit" class="heroBtn w-full sm:w-fit lg:w-3/6 mx-auto"><div class="text">Submit</div></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div *ngIf="submited" class="fixed inset-0 backdrop-blur-sm z-10 h-full w-full flex justify-center items-center">
+    <div [ngClass]="submited ? 'scale-100' : 'scale-50'" class="transition-transform transform duration-1000 ease-in-out w-[80%] h-[50%] lg:w-[50%] bg-blue-300 dark:bg-blue-800 rounded-2xl shadow-2xl shadow-blue-500 dark:shadow-blue-600 relative">
+        <button (click)="closePopup()" class="absolute p-4 right-0 hover:cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="size-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="p-8 md:p-12 w-[90%] max-w-[600px] mx-auto space-y-12">
+            <h3 class="text-2xl sm:text-4xl text-center font-bold text-blue-700 dark:text-blue-300">Thank you for getting in touch through my website!</h3>
+            <img class="h-[180px] object-fill mx-auto" src="../../assets/svg/mail-sented.svg" alt="Mail Sumbited!"/>
+        </div>
+    </div>
+</div>

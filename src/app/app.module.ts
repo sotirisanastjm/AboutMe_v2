@@ -18,6 +18,10 @@ import { BannerProductComponent } from './banner-product/banner-product.componen
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectItemComponent } from './projects/project-item/project-item.component';
 import { BannerFocusComponent } from './banner-focus/banner-focus.component';
+import { BannerGradientComponent } from './banner-gradient/banner-gradient.component';
+import { HeroComponent } from './hero/hero.component';
+import { BannerActionComponent } from './banner-action/banner-action.component';
+import { ProgressCardComponent } from './progress-card/progress-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { BannerFocusComponent } from './banner-focus/banner-focus.component';
     BannerProductComponent,
     ProjectsComponent,
     ProjectItemComponent,
-    BannerFocusComponent
+    BannerFocusComponent,
+    BannerGradientComponent,
+    HeroComponent,
+    BannerActionComponent,
+    ProgressCardComponent
   ],
   imports: [
     BrowserModule,

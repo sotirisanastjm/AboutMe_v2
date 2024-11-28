@@ -1,13 +1,18 @@
 [
     {
       "id": "1",
+      "inProgress": false,
       "link":{
         "url": "https://quantumgiz.netlify.app/",
         "text": "Explore now!"
       },
       "name": "QuantumGiz",
       "description": "A Tech Eshop focused on delivering a seamless, mobile-friendly user experience, showcasing skills in modern web development.",
-      "logoUrl": "../../assets/images/QuantumGiz.png",
+      "logoUrl": {
+        "url": "../../assets/images/QuantumGiz.png",
+        "text": "QuantumGiz"
+      },
+      "logoRight": true,
       "onlyLogo": false,
       "cardImage" : "../../assets/images/ShopNow.jpg",
       "alt": "QuantumGiz e-Commerce Project",
@@ -55,6 +60,62 @@
         }
       ]
       
+    },
+    {
+      "id": "2",
+      "inProgress": true,
+      "progressCard": {
+        "isCompleted": false,
+        "percent":"40%"
+      },
+      "name": "NexusChat",
+      "description": "A decentralized application that integrates AI-driven coding assistance with a blockchain-based user profile system, focused on helping developers learn and build DApps on the Sui network.",
+      "logoUrl": {
+        "url": "",
+        "text": "NexusChat"
+      },
+      "logoRight": false,
+      "onlyLogo": false,
+      "cardImage": "../../assets/images/NexusChat-card.jpg",
+      "alt": "NexusChat AI Chatbot & DApp Project",
+      "svgIds": [
+        {"id": "2", "name": "React"},
+        {"id": "5", "name": "Tailwind"},
+        {"id": "9", "name": ".NET"}
+      ],
+      "heroImage": "../../assets/images/hero-image-nexuschat.jpg",
+      "infoCards": [
+        {
+          "title": "AI-Powered Blockchain Assistance",
+          "description": "The AI chatbot assists users by providing tailored coding guidance, answering questions, and helping developers learn blockchain programming concepts for building DApps on the Sui network.",
+          "svg": "",
+          "alt": "AI coding assistance for DApp developers"
+        },
+        {
+          "title": "Decentralized Data Storage",
+          "description": "User profiles, chat histories, and stored code are securely stored on the Sui blockchain, ensuring privacy and decentralization while allowing users to track and manage their learning progress.",
+          "svg": "",
+          "alt": "decentralized storage on Sui blockchain"
+        },
+        {
+          "title": "Seamless Integration with Sui Network",
+          "description": "The application is designed to integrate directly with the Sui blockchain, using Sui wallet for authentication, providing a decentralized and secure user experience.",
+          "svg": "",
+          "alt": "integration with Sui blockchain network"
+        }
+      ],
+      "nextStepTitle": "What's Next for NexusChat?",
+      "nextSvg": "../../assets/svg/in-progress.svg",
+      "nextSteps": [
+        {
+          "title": "Subscription Model with Premium Content",
+          "description": "Introduce a subscription-based model that grants access to enhanced GPT-powered AI features and personalized DApp development assistance. Subscribers will also gain exclusive access to a dedicated page with videos, tutorials, and articles to further their blockchain development skills."
+        },
+        {
+          "title": "Admin Panel for Content Management",
+          "description": "Develop an Admin Panel that allows administrators to easily add, edit, or remove content, such as videos and articles, on the premium content page. This will enable dynamic content management, keeping the learning resources up to date and relevant for subscribers."
+        }
+      ]
     }
   ]
   

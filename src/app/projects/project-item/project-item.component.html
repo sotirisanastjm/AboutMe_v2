@@ -2,9 +2,13 @@
     <img class="h-[600px] w-full object-cover" [src]="project?.heroImage" [alt]="project?.name + 'Project'"/>
     <div class="absolute flex w-full h-full items-center inset-0 bg-black/60 backdrop-blur-[6px] z-10">
         <div class="sm:w-4/5 md:w-3/5 lg:w-1/2 space-y-4 px-4 md:px-8 lg:px-[120px]">
-            <h1 *ngIf="!project?.onlyLogo" class="text-[40px] text-blue-100 lg:text-4xl font-bold flex flex-row gap-1">{{project?.name}}<img [src]="project?.logoUrl" [alt]="project?.alt"/></h1>
+            <h1 *ngIf="!project?.onlyLogo" class="text-[40px] text-blue-100 lg:text-4xl font-bold items-center flex flex-row gap-1">
+                <img *ngIf="project?.logoUrl?.url && !project?.logoRight" [src]="project?.logoUrl?.url" [alt]="project?.alt"/>
+                {{project?.logoUrl?.text}}
+                <img *ngIf="project?.logoUrl?.url && project?.logoRight" [src]="project?.logoUrl?.url" [alt]="project?.alt"/>
+            </h1>
             <p class="text-xl md:text-2xl text-blue-500 font-semibold">{{project?.description}}</p>
-            <a [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
+            <a *ngIf="project?.link?.url" [href]="project?.link?.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
         </div>
     </div>
 </div>
@@ -21,7 +25,7 @@
 <section *ngIf="project?.infoCards" class="container mx-auto px-4 lg:px-0">
     <div class="flex flex-col lg:flex-row justify-center gap-12 w-full items-center lg:items-stretch">
         <div *ngFor="let card of project?.infoCards" class="p-8 bg-blue-100 dark:bg-blue-800 rounded-3xl flex flex-col sm:flex-row lg:flex-col gap-4 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px]">
-            <img class="h-[180px] object-fill" [src]="card?.svg" [alt]="card?.alt"/>
+            <img *ngIf="card?.svg" class="h-[180px] object-fill" [src]="card?.svg" [alt]="card?.alt"/>
             <div>
                 <h3 class="text-xl font-bold mb-4">{{ card?.title }}</h3>
                 <p class="text-lg">{{ card?.description }}</p>
@@ -51,5 +55,9 @@
 <section *ngIf="project?.actionCard" class="container mx-auto px-4 lg:px-0 flex flex-col justify-center items-center w-fit text-center">
     <h3 class="text-2xl md:text-4xl font-bold mb-2">{{project?.actionCard.title}}</h3>
     <p class="text-xl md:text-2xl font-semibold mb-6">{{project?.actionCard.subtitle}}</p>
-    <a [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] w-full sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
+    <a *ngIf="project?.link.url" [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] w-full sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
 </section>
+
+<ng-container *ngIf="project?.progressCard">
+    <app-progress-card [progressCard]="project?.progressCard"></app-progress-card>
+</ng-container>

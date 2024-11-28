@@ -39,4 +39,7 @@ body{
     .banner-gradient {
         background: linear-gradient(to bottom right, var(--banner-color) 40%, transparent 60%);
     }
+    .banner-gradient-bottom {
+        background: linear-gradient(to top left, var(--banner-color) 40%, transparent 60%);
+    }
 }

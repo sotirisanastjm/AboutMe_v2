@@ -1,4 +1,4 @@
-<section class="dark:bg-blue-900 bg-blue-300 pt-16 pb-10">
+<section class="banner-gradient-bottom pt-16 pb-10">
   <div class="container mx-auto flex flex-col gap-8">
 
     <div class="space-y-4 text-center">
@@ -6,14 +6,19 @@
       <h3 class="text-2xl font-bold text-blue-700">Discover the Projects That Define My Skills</h3>
     </div>
 
-    <div class="grid grid-cols-1 justify-items-center gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-8">
 
       <a [routerLink]="['/projects', getId(project.id)]" *ngFor="let project of projects" class="relative min-h-[300px] max-w-[300px] w-full overflow-hidden rounded-3xl">
         <img class="w-full h-full object-cover" [src]=" project.cardImage " [alt]="project.alt"/>
+        <div class="absolute inset-0 bg-blue-800 opacity-[0.15]"></div>
         <div class="projectCard absolute inset-0 p-4 backdrop-blur-[2px] rounded-3xl z-10">
           <div class="projectOut flex flex-col h-full w-full justify-between">
-            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">{{project.name}}<img class="h-8 w-8 object-cover" [src]="project.logoUrl" [alt]="project.alt" /></h3>
-            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project.logoUrl" [alt]="project.alt"/>
+            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">
+              <img *ngIf="project?.logoUrl?.url && !project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+              {{project?.logoUrl?.text}}
+              <img *ngIf="project?.logoUrl?.url && project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+            </h3>
+            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project?.logoUrl?.url" [alt]="project.alt"/>
             <div class="mx-auto gap-2 flex flex-row justify-center items-center w-fit">
               <ng-container *ngFor="let svg of project.svgIds">
                 <app-svg-list [svg]="svg.id"></app-svg-list>
@@ -21,8 +26,12 @@
             </div>
           </div>
           <div class="projectIn absolute inset-0 p-4 backdrop-blur-[2px] rounded-3xl z-10 text-lg font-medium">
-            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">{{project.name}}<img class="h-8 w-8 object-cover" [src]="project.logoUrl" [alt]="project.alt" /></h3>
-            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project.logoUrl" [alt]="project.alt"/>
+            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">
+              <img *ngIf="project?.logoUrl?.url && !project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+              {{project?.logoUrl?.text}}
+              <img *ngIf="project?.logoUrl?.url && project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+            </h3>
+            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project?.logoUrl?.url" [alt]="project.alt"/>
             <p class="text-blue-200">{{project.description}}</p>
           </div>
         </div>
