@@ -1,0 +1,91 @@
+.heroBtn {
+    @apply text-xl font-bold flex justify-center items-center cursor-pointer dark:bg-blue-300 bg-blue-700 dark:outline-[#DDE6ED] ; 
+    padding: 10px 15px;
+    gap: 15px;
+    outline: 3px #526D82 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    transition: 400ms;
+}
+
+.heroBtn .text {
+    @apply dark:text-blue-900 text-white;
+    transition: 400ms;
+}
+
+.heroBtn:hover {
+    @apply dark:bg-dark-blue;
+    background-color: transparent;
+}
+
+.heroBtn:hover .text {
+    @apply text-blue-700 dark:text-blue-300;
+}
+
+.link-text {
+  @apply flex relative;
+  background-image: linear-gradient(
+    to right,
+    #526D82,
+    #526D82 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+//Tool Tip
+.tooltip {
+    @apply relative inline-block cursor-pointer;
+  }
+  
+  .tooltip .techSvg {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+  }
+  
+  .tooltip .techSvg:hover {
+    transform: scale(1.1);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  
+  .tooltiptext {
+    @apply dark:text-blue-900 text-white dark:bg-blue-300 bg-blue-700 font-bold;
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.2s ease-out;
+  }
+  
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    --border-color:#526D82;
+    .dark &{
+        --border-color: #DDE6ED;
+    }
+    border-color: var(--border-color) transparent transparent transparent;
+  }
+  

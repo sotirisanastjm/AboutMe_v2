@@ -1,0 +1,121 @@
+[
+    {
+      "id": "1",
+      "inProgress": false,
+      "link":{
+        "url": "https://quantumgiz.netlify.app/",
+        "text": "Explore now!"
+      },
+      "name": "QuantumGiz",
+      "description": "A Tech Eshop focused on delivering a seamless, mobile-friendly user experience, showcasing skills in modern web development.",
+      "logoUrl": {
+        "url": "../../assets/images/QuantumGiz.png",
+        "text": "QuantumGiz"
+      },
+      "logoRight": true,
+      "onlyLogo": false,
+      "cardImage" : "../../assets/images/ShopNow.jpg",
+      "alt": "QuantumGiz e-Commerce Project",
+      "svgIds": [
+        {"id": "2", "name": "React"},
+        {"id": "5", "name": "Tailwind"},
+        {"id": "6", "name": "Javascript"}
+      ],
+      "heroImage": "../../assets/images/hero-image-quantumgiz.jpg",
+      "actionCard": {
+        "title": "Ready to Experience QuantumGiz?",
+        "subtitle": "Join us on this exciting journey of seamless shopping."
+      },
+      "infoCards": [
+        {
+          "title": "Optimized for All Screen Sizes",
+          "description": "QuantumGiz is designed with a mobile-first approach, ensuring a seamless experience across all devices. The layout adapts effortlessly to smartphones, tablets, and desktops, providing an engaging interface regardless of screen size.",
+          "svg": "../../assets/svg/responsive.svg",
+          "alt": "responsive design"
+        },
+        {
+          "title": "Dynamic Shopping Cart & Gallery",
+          "description": "Built an intuitive shopping cart that allows real-time updates and a user-friendly product gallery. Users can easily browse items, apply filters, and track their selections in a streamlined manner, demonstrating a functional online shopping experience without actual payments.",
+          "svg": "../../assets/svg/add_to_cart.svg",
+          "alt": "intuitive shopping cart that allows real-time updates and a user-friendly product gallery"
+        },
+        {
+          "title": "Wild Card Product Display & Recommendations",
+          "description": "Implemented a wild card feature for showcasing products, enabling a clean and organized layout that highlights various items. This card also includes recommendation sliders that suggest similar products, enhancing user engagement by presenting tailored options based on browsing behavior.",
+          "svg": "../../assets/svg/landing.svg",
+          "alt":  "Implemented a wild card feature for showcasing products"
+        }
+        
+      ],
+      "nextStepTitle":"What's Next for QuantumGiz?",
+      "nextSvg": "../../assets/svg/in-progress.svg",
+      "nextSteps": [
+        {
+          "title": "Implement Smart Search Navigation",
+          "description": "Add a search bar that filters products by name, category, and tags in real-time. Ensure the search results are user-friendly and visually appealing."
+        },
+        {
+          "title": "Create a Wishlist/Favorites List",
+          "description": "Allow users to save their favorite products without creating an account. Utilize local storage to save data temporarily and clear it after a set period."
+        }
+      ]
+      
+    },
+    {
+      "id": "2",
+      "inProgress": true,
+      "progressCard": {
+        "isCompleted": false,
+        "percent":"40%"
+      },
+      "name": "NexusChat",
+      "description": "A decentralized application that integrates AI-driven coding assistance with a blockchain-based user profile system, focused on helping developers learn and build DApps on the Sui network.",
+      "logoUrl": {
+        "url": "",
+        "text": "NexusChat"
+      },
+      "logoRight": false,
+      "onlyLogo": false,
+      "cardImage": "../../assets/images/NexusChat-card.jpg",
+      "alt": "NexusChat AI Chatbot & DApp Project",
+      "svgIds": [
+        {"id": "2", "name": "React"},
+        {"id": "5", "name": "Tailwind"},
+        {"id": "9", "name": ".NET"}
+      ],
+      "heroImage": "../../assets/images/hero-image-nexuschat.jpg",
+      "infoCards": [
+        {
+          "title": "AI-Powered Blockchain Assistance",
+          "description": "The AI chatbot assists users by providing tailored coding guidance, answering questions, and helping developers learn blockchain programming concepts for building DApps on the Sui network.",
+          "svg": "",
+          "alt": "AI coding assistance for DApp developers"
+        },
+        {
+          "title": "Decentralized Data Storage",
+          "description": "User profiles, chat histories, and stored code are securely stored on the Sui blockchain, ensuring privacy and decentralization while allowing users to track and manage their learning progress.",
+          "svg": "",
+          "alt": "decentralized storage on Sui blockchain"
+        },
+        {
+          "title": "Seamless Integration with Sui Network",
+          "description": "The application is designed to integrate directly with the Sui blockchain, using Sui wallet for authentication, providing a decentralized and secure user experience.",
+          "svg": "",
+          "alt": "integration with Sui blockchain network"
+        }
+      ],
+      "nextStepTitle": "What's Next for NexusChat?",
+      "nextSvg": "../../assets/svg/in-progress.svg",
+      "nextSteps": [
+        {
+          "title": "Subscription Model with Premium Content",
+          "description": "Introduce a subscription-based model that grants access to enhanced GPT-powered AI features and personalized DApp development assistance. Subscribers will also gain exclusive access to a dedicated page with videos, tutorials, and articles to further their blockchain development skills."
+        },
+        {
+          "title": "Admin Panel for Content Management",
+          "description": "Develop an Admin Panel that allows administrators to easily add, edit, or remove content, such as videos and articles, on the premium content page. This will enable dynamic content management, keeping the learning resources up to date and relevant for subscribers."
+        }
+      ]
+    }
+  ]
+  
