@@ -15,9 +15,15 @@ export class NavigationComponent {
   }
   
   
-  toggleMenu() {
-    this.menuState = this.menuState === 'closed' ? 'open' : 'closed';
-    document.body.classList.toggle('overflow-y-hidden', this.menuState === 'open');
+  toggleMenu(logoEvent?: boolean) {
+
+    if(logoEvent){
+      this.menuState = 'closed';
+      document.body.classList.toggle('overflow-y-hidden', false);
+    }else{
+      this.menuState = this.menuState === 'closed' ? 'open' : 'closed';
+      document.body.classList.toggle('overflow-y-hidden', this.menuState === 'open');
+    }
   }
   
   loadDarkModePreference() {
