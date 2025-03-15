@@ -20,9 +20,11 @@ export class NavigationComponent {
     if(logoEvent){
       this.menuState = 'closed';
       document.body.classList.toggle('overflow-y-hidden', false);
+      document.body.classList.toggle('fixed', false);
     }else{
       this.menuState = this.menuState === 'closed' ? 'open' : 'closed';
       document.body.classList.toggle('overflow-y-hidden', this.menuState === 'open');
+      document.body.classList.toggle('fixed', this.menuState === 'open');
     }
   }
   

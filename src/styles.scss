@@ -5,7 +5,7 @@
 @import '../src/assets/shared/all.scss';
 
 body{
-    @apply bg-white text-black;
+    @apply bg-white text-black w-full;
     p{
         @apply text-[#526D82];
     }

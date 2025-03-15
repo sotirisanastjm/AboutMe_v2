@@ -80,3 +80,7 @@ input:checked + .switchSlider:before {
     transform: translateX(100%);
     box-shadow: inset 8px -4px 0px 0px #526D82;
 }
+
+.menuHeight{
+    height: calc(100vh - 62px);
+}
