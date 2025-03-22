@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+// import { ContactComponent } from './contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MediaComponent } from './media/media.component';
 import { HeroImageComponent } from './hero-image/hero-image.component';
@@ -27,7 +27,7 @@ import { ProgressCardComponent } from './progress-card/progress-card.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent,
+    // ContactComponent,
     NavigationComponent,
     MediaComponent,
     HeroImageComponent,
