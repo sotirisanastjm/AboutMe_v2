@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,12 +12,12 @@ export class ContactComponent implements OnInit {
   message: any = '';
   htmlResponse: any;
   submited: boolean = false;
-  constructor(private http: HttpClient,private route: ActivatedRoute) {}
+  constructor(private http: HttpClient, private route: ActivatedRoute, private meta: Meta, private title: Title) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       let submit = decodeURIComponent(params['submit']);
-      if(submit === 'true'){
+      if (submit === 'true') {
         this.submited = true;
         document.body.classList.toggle('overflow-y-hidden', this.submited);
         let updatedUrl = document.location.pathname.replace("/true", "");
@@ -31,10 +32,29 @@ export class ContactComponent implements OnInit {
     
     Best regards,
     Anastasiadis Sotirios`;
+
+    const metaTags = [
+      { name: 'description', content: 'I am Sotiris Anastasiadis, Feel free to share your thoughts or ask anything!' },
+      { name: 'keywords', content: 'Contact Me!' },
+      { name: 'author', content: 'Sotiris Anastasiadis' }
+    ];
+
+    metaTags.forEach(tag => {
+      if (this.meta.getTag(`name="${tag.name}"`)) {
+        this.meta.removeTag(`name="${tag.name}"`);
+      }
+    });
+
+    metaTags.forEach(tag => {
+      this.meta.addTag(tag);
+    });
+
+    this.title.setTitle('Anast.dev');
+
   }
 
-  closePopup(){
-    this.submited = false;
-    document.body.classList.toggle('overflow-y-hidden', this.submited);
-  }
+closePopup() {
+  this.submited = false;
+  document.body.classList.toggle('overflow-y-hidden', this.submited);
+}
 }
