@@ -20,8 +20,10 @@
             </h3>
             <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project?.logoUrl?.url" [alt]="project.alt"/>
             <div class="mx-auto gap-2 flex flex-row justify-center items-center w-fit">
-              <ng-container *ngFor="let svg of project.svgIds">
-                <app-svg-list [svg]="svg.id"></app-svg-list>
+              <ng-container *ngFor="let svg of project.svgIds; let index= index">
+                <ng-container *ngIf="index <= 2">
+                  <app-svg-list [svg]="svg.id"></app-svg-list>
+                </ng-container>
               </ng-container>
             </div>
           </div>
