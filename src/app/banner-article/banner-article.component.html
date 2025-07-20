@@ -1,0 +1,29 @@
+
+<section class="container mx-auto px-4 xl:px-12 flex flex-col gap-4 lg:gap-8">
+    <div class="lg:w-[60%] mx-auto text-center space-y-2">
+        <h2 class="text-2xl sm:text-4xl font-bold">{{data.Title}}</h2>
+        <h3 class="text-lg sm:text-xl">{{data.Subtitle}}</h3>
+    </div>
+    <div [ngClass]="{'lg:grid-cols-2': data.Articles.length == 2, 'lg:grid-cols-3' : data.Articles.length >= 3, 'justify-items-center lg:w-1/2 lg:mx-auto' : data.Articles.length == 1}" class="grid grid-cols-1 gap-8">
+        <ng-container *ngFor="let article of data?.Articles">
+            <a [href]="article?.File?.src" target="_blank" class="p-2 rounded-xl scale-card relative overflow-hidden bg-blue-400 shadow-2xl shadow-dark-blue/50 w-full">
+                <div class="relative !overflow-hidden min-h-[300px] lg:min-h-[400px] bg-blue-700/60 rounded-lg text-white">
+                    <img [src]="article?.Image?.src" [alt]="article?.Image?.alt" class="absolute w-full h-full object-cover inset-0 " />
+                    <div class="absolute rounded-inherit img-overlay h-full inset-0"></div>
+                    <div class="absolute inset-0 z-10 h-full">
+                        <div class="flex flex-col justify-between h-full p-6">
+                            <div class="self-end font-bold text-md">{{article?.File?.date}}</div>
+                            <div class="space-y-8">
+                                <div class="space-y-4">
+                                    <h4 class="font-bold text-2xl !text-white lg:text-4xl">{{article.Title}}</h4>
+                                    <h5 class="text-xl lg:text-2xl !text-white">{{article?.Subtitle}}</h5>
+                                </div>
+                                <div class="font-bold uppercase text-md px-4 py-1 rounded-lg bg-black/50 shadow-md shadow-white/50 w-fit">{{article?.File?.extension}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </ng-container>
+    </div>
+</section>

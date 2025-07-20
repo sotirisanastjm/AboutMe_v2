@@ -4,42 +4,77 @@
 @import 'tailwindcss/utilities';
 @import '../src/assets/shared/all.scss';
 
-body{
+body {
     @apply bg-white text-black w-full;
-    p{
+
+    p {
         @apply text-[#526D82];
     }
-    h1,h2,h3,h4{
+
+    h1,
+    h2,
+    h3,
+    h4 {
         @apply text-blue-900;
     }
-    section{
+
+    section {
         @apply mb-24;
     }
 
 
-    &.dark{
+    &.dark {
         @apply bg-dark-blue text-white;
-        p{
+
+        p {
             @apply text-[#929AAB];
         }
-        h1,h2,h3,h4{
+
+        h1,
+        h2,
+        h3,
+        h4 {
             @apply text-blue-300;
         }
     }
 
-    @screen md{
-        section{
+    @screen md {
+        section {
             @apply mb-40;
         }
     }
+
     --banner-color: #DDE6ED;
-    &.dark{
+
+    &.dark {
         --banner-color: #27374D;
     }
+
     .banner-gradient {
         background: linear-gradient(to bottom right, var(--banner-color) 40%, transparent 60%);
     }
+
     .banner-gradient-bottom {
         background: linear-gradient(to top left, var(--banner-color) 40%, transparent 60%);
     }
+
+    .img-overlay {
+        background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.6) 40%, transparent 70%);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        border-radius: inherit;
+        will-change: opacity;
+    }
+
+    .scale-card:hover .img-overlay {
+        opacity: 1;
+    }
+
+
 }

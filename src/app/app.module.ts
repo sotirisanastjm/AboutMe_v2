@@ -22,6 +22,7 @@ import { BannerGradientComponent } from './banner-gradient/banner-gradient.compo
 import { HeroComponent } from './hero/hero.component';
 import { BannerActionComponent } from './banner-action/banner-action.component';
 import { ProgressCardComponent } from './progress-card/progress-card.component';
+import { BannerArticleComponent } from './banner-article/banner-article.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProgressCardComponent } from './progress-card/progress-card.component';
     BannerGradientComponent,
     HeroComponent,
     BannerActionComponent,
-    ProgressCardComponent
+    ProgressCardComponent,
+    BannerArticleComponent
   ],
   imports: [
     BrowserModule,

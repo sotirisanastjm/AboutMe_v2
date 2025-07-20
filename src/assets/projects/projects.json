@@ -151,6 +151,25 @@
       "ImageAlt": "Data Security with a man and a lock",
       "ctaText": "Start Chatting",
       "ctaLink": "/chat"
+    },
+    "articleSection": {
+      "Title": "Research Publications",
+      "Subtitle": "Explore the full thesis and published article based on my work on NexusChat, an AI-powered chatbot integrated with the Sui blockchain to support decentralized application development.",
+      "Articles": [
+        {
+          "Title": "NexusChat",
+          "Subtitle": "Development of a Web Application with Artificial Intelligence Chatbot and Decentralized Database",
+          "Image": {
+            "src": "../../assets/images/thesis.png",
+            "alt": "A Kid Looking at a wall with a lot of numbers"
+          },
+          "File": {
+            "src": "../../assets/documents/Thesis.pdf",
+            "extension": "PDF",
+            "date": "3 Jul 2025"
+          }
+        }
+      ]
     }
   }
 ]
