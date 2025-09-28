@@ -22,15 +22,15 @@
     "alt": "QuantumGiz e-Commerce Project",
     "svgIds": [
       {
-        "id": "2",
+        "id": "3",
         "name": "React"
       },
       {
-        "id": "5",
+        "id": "6",
         "name": "Tailwind"
       },
       {
-        "id": "6",
+        "id": "7",
         "name": "Javascript"
       }
     ],
@@ -95,19 +95,19 @@
     "alt": "NexusChat AI Chatbot & DApp Project",
     "svgIds": [
       {
-        "id": "2",
+        "id": "3",
         "name": "React"
       },
       {
-        "id": "5",
+        "id": "6",
         "name": "Tailwind"
       },
       {
-        "id": "9",
+        "id": "10",
         "name": ".NET"
       },
       {
-        "id": "10",
+        "id": "11",
         "name": "Sui Move"
       }
     ],
@@ -171,5 +171,86 @@
         }
       ]
     }
+  },
+  {
+  "id": "3",
+  "name": "Fetchly",
+  "description": "A clean and minimal web app for developers to explore the latest tech articles, using the Dev.to API to filter content by tags and topics.",
+  "link": {
+    "url": "https://fetchlynews.netlify.app/",
+    "text": "Check it out"
+  },
+  "inProgress": false,
+  "progressCard": {
+    "isCompleted": true,
+    "percent": "100%"
+  },
+  "logoUrl": {
+    "url": "",
+    "text": "Fetchly"
+  },
+  "logoRight": false,
+  "onlyLogo": false,
+  "cardImage": "../../assets/images/articles.jpg",
+  "alt": "Fetchly Tech News Aggregator Project",
+  "svgIds": [
+    {
+      "id": "2",
+      "name": "Nextjs"
+    },
+    {
+      "id": "6",
+      "name": "Tailwind"
+    },
+    {
+      "id": "8",
+      "name": "Typescript"
+    }
+  ],
+  "heroImage": "../../assets/images/article-hero.jpg",
+  "infoCards": [
+    {
+      "title": "Minimal UI for Focused Reading",
+      "description": "Fetchly is designed with a developer-first mindset. The interface is distraction-free and content-driven, allowing users to focus on reading tech articles with clarity."
+    },
+    {
+      "title": "Tag-Based Article Discovery",
+      "description": "Users can explore articles from dev.to based on their favorite technologies. Tags like React, JavaScript, and Next.js help filter content to match personal interests."
+    },
+    {
+      "title": "Dynamic Article Fetching with Loaders",
+      "description": "Built using Next.js and Dev.to's public API, the app fetches real-time content and includes skeleton loaders for a smooth user experience."
+    },
+    {
+      "title": "Full SSR & SEO Optimization",
+      "description": "Fetchly now renders almost everything on the server — articles, galleries, and metadata. This not only boosts SEO but also ensures the header is fully preloaded with search-friendly elements."
+    }
+  ],
+  "nextStepTitle": "What’s Next for Fetchly?",
+  "nextSvg": "../../assets/svg/in-progress.svg",
+  "nextSteps": [
+    {
+      "title": "Advanced Article Recommendations",
+      "description": "Introduce personalized recommendations based on reading history and bookmarked articles, helping developers discover more relevant content."
+    },
+    {
+      "title": "Community Interaction Features",
+      "description": "Enable light interaction like article upvotes, shares, and discussion threads directly inside Fetchly to increase engagement without leaving the platform."
+    }
+  ],
+  "actionCard": {
+    "title": "Explore Developer News on Fetchly",
+    "subtitle": "Stay up to date with the latest articles from the dev world."
+  },
+  "bannerSection": {
+    "title": "Server-Side Rendering & SEO Focused",
+    "subtitle": "Fetchly now runs fully SSR, preloading articles, galleries, and headers server-side — drastically improving SEO and providing developers with lightning-fast performance.",
+    "ImageSrc": "../../assets/svg/server.svg",
+    "ImageAlt": "SEO Optimization Illustration",
+    "ctaText": "Start Reading",
+    "ctaLink": "/"
   }
+}
+
+
 ]

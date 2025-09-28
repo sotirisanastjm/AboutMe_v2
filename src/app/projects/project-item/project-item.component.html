@@ -37,10 +37,10 @@
 
 <section *ngIf="project?.infoCards" class="container mx-auto px-4 lg:px-0">
     <div class="flex flex-col lg:flex-row justify-center gap-12 w-full items-center lg:items-stretch">
-        <div *ngFor="let card of project?.infoCards" class="p-8 bg-blue-100 dark:bg-blue-800 shadow-xl rounded-3xl flex flex-col sm:flex-row lg:flex-col gap-4 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px]">
-            <img *ngIf="card?.svg" class="h-[180px] object-fill" [src]="card?.svg" [alt]="card?.alt"/>
-            <div>
-                <h3 class="text-xl font-bold mb-4">{{ card?.title }}</h3>
+        <div *ngFor="let card of project?.infoCards" class="p-6 bg-blue-100 dark:bg-blue-800 dark:shadow-white/10 shadow-xl rounded-3xl flex flex-col sm:flex-row lg:flex-col gap-4 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px]">
+            <img *ngIf="card?.svg" class="h-[180px] object-fill mb-4" [src]="card?.svg" [alt]="card?.alt"/>
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">{{ card?.title }}</h3>
                 <p class="text-lg">{{ card?.description }}</p>
             </div>
         </div>

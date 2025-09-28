@@ -1,7 +1,7 @@
 <section class="container mx-auto">
     <div class="flex flex-col">
         <h3 class="self-center font-bold text-3xl mb-14">My Skills</h3>
-        <div class="mx-4 gap-4 md:gap-8 grid grid-cols-3 md:grid-cols-9 justify-items-center w-fit self-center">
+        <div class="mx-4 gap-4 md:gap-8 grid grid-cols-3 md:grid-cols-6 justify-items-center w-fit self-center">
             <div class="tooltip" *ngFor="let skill of skillsList">
                 <app-svg-list [svg]="skill.svg"></app-svg-list>
                 <div class="tooltiptext">{{ skill.name }}</div>
