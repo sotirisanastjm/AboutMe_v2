@@ -250,7 +250,84 @@
     "ctaText": "Start Reading",
     "ctaLink": "/"
   }
-}
-
-
+},
+{
+    "id": "4",
+    "name": "Certed",
+    "description": "A focused Sitecore certification prep workspace that helps professionals study with exam-aligned resources and practical progress checkpoints.",
+    "link": {
+      "url": "https://certed.dev/",
+      "text": "Start Learning"
+    },
+    "inProgress": false,
+    "progressCard": {
+      "isCompleted": true,
+      "percent": "100%"
+    },
+    "logoUrl": {
+      "url": "../../assets/images/Certed.svg",
+      "text": "Certed"
+    },
+    "logoRight": true,
+    "onlyLogo": false,
+    "cardImage": "../../assets/images/development.jpg",
+    "alt": "Certed Sitecore Certification Prep Platform",
+    "svgIds": [
+      {
+        "id": "2",
+        "name": "Nextjs"
+      },
+      {
+        "id": "6",
+        "name": "Tailwind"
+      },
+      {
+        "id": "8",
+        "name": "Typescript"
+      }
+    ],
+    "heroImage": "../../assets/images/development.jpg",
+    "infoCards": [
+      {
+        "title": "Certification-Specific Preparation",
+        "description": "Certed offers dedicated learning paths for XM Cloud, Content Cloud, CDP/Personalize, and more — giving you curated resources tailored to each Sitecore certification exam."
+      },
+      {
+        "title": "Exam-Aligned Study Domains",
+        "description": "Work through curated materials grouped by the competencies that actually appear in the exam. No guesswork, just relevant content organized by objective areas."
+      },
+      {
+        "title": "Focused Practice & Validation",
+        "description": "Review your weak spots with practical checkpoints before moving to the next domain. Validate your knowledge and sit the exam with confidence."
+      },
+      {
+        "title": "Single Place for All Resources",
+        "description": "Official docs, guided learning, and quiz-ready revision in one place. Move from discovery to focused practice without context switching."
+      }
+    ],
+    "nextStepTitle": "What's Next for Certed?",
+    "nextSvg": "../../assets/svg/in-progress.svg",
+    "nextSteps": [
+      {
+        "title": "Interactive Practice Quizzes",
+        "description": "Introduce timed practice quizzes that simulate real exam conditions, helping users identify knowledge gaps and track improvement over time."
+      },
+      {
+        "title": "Community Study Groups",
+        "description": "Enable users to form study groups, share progress, and discuss challenging topics together — building a supportive community of Sitecore professionals."
+      }
+    ],
+    "actionCard": {
+      "title": "Ready to Get Sitecore Certified?",
+      "subtitle": "Join Certed and turn your certification goals into a structured study win."
+    },
+    "bannerSection": {
+      "title": "Your Path to Sitecore Certification",
+      "subtitle": "Certed is a study platform designed for Sitecore professionals who need a direct, exam-ready path instead of scattered research. Plan your track, study by domain, and validate with confidence.",
+      "ImageSrc": "../../assets/svg/programming.svg",
+      "ImageAlt": "Sitecore Certification Preparation",
+      "ctaText": "Start Learning",
+      "ctaLink": "/"
+    }
+  }
 ]
