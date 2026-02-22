@@ -22,7 +22,7 @@
     <article class="cv-content bg-white rounded-xl shadow-lg border border-blue-200 text-black">
         
         <!-- Header Section -->
-        <header class="p-6 sm:p-8 border-b border-blue-200">
+        <header class="p-6 sm:p-8 border-b border-blue-200 cv-header">
             <div class="flex flex-col sm:flex-row gap-6">
                 <img 
                     src="../../assets/images/SotirisAnastasiadis.jpg" 
@@ -70,45 +70,30 @@
             </div>
         </header>
 
-        <div class="p-6 sm:p-8 space-y-8">
+        <div class="p-6 sm:p-8 cv-sections">
             <!-- About Me -->
             <section>
                 <h2 class="cv-section-title">About Me</h2>
-                <p class="leading-relaxed text-sm sm:text-base text-blue-600">
-                    Software Engineer who thrives on turning complex challenges into elegant solutions. <strong class="text-blue-900">3+ years at Ernst & Young</strong> delivering enterprise banking portals. Passionate about clean code, modern web technologies, and collaborating to build products that make a difference.
+                <p class="leading-relaxed text-sm text-blue-600">
+                    Software Engineer with <strong class="text-blue-900">3+ years at Ernst & Young</strong> delivering enterprise banking portals. Skilled in Angular, .NET, and Sitecore CMS with focus on SEO and accessibility.
                 </p>
             </section>
 
-            <!-- Core Competencies / Skills -->
+            <!-- Technical Skills -->
             <section>
                 <h2 class="cv-section-title">Technical Skills</h2>
-                <div class="skills-grid grid grid-cols-3 gap-4">
-                    <div>
-                        <h3 class="font-semibold text-sm mb-2 text-accent">Frontend Development</h3>
-                        <ul class="text-sm space-y-1 text-blue-600">
-                            <li>Angular</li>
-                            <li>React / Next.js</li>
-                            <li>TypeScript / JavaScript (ES6+)</li>
-                            <li>HTML5 / CSS3 / SCSS</li>
-                        </ul>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <span class="skill-label">Frontend:</span>
+                        <span class="skill-tags">Angular · React · Next.js · TypeScript · JavaScript · HTML5 · CSS3 · SCSS</span>
                     </div>
-                    <div>
-                        <h3 class="font-semibold text-sm mb-2 text-accent">Backend & Database</h3>
-                        <ul class="text-sm space-y-1 text-blue-600">
-                            <li>Sitecore XM / XP</li>
-                            <li>.NET / C# / MVC</li>
-                            <li>SQL Server (Views, Stored Procedures)</li>
-                            <li>REST APIs</li>
-                        </ul>
+                    <div class="skill-category">
+                        <span class="skill-label">Backend:</span>
+                        <span class="skill-tags">Sitecore XM/XP · .NET · C# · SQL Server · REST APIs</span>
                     </div>
-                    <div>
-                        <h3 class="font-semibold text-sm mb-2 text-accent">Best Practices</h3>
-                        <ul class="text-sm space-y-1 text-blue-600">
-                            <li>SEO Optimization</li>
-                            <li>Web Accessibility (WCAG)</li>
-                            <li>Responsive Design</li>
-                            <li>Git / Azure DevOps</li>
-                        </ul>
+                    <div class="skill-category">
+                        <span class="skill-label">Practices:</span>
+                        <span class="skill-tags">SEO · WCAG Accessibility · Responsive Design · Git · Azure DevOps</span>
                     </div>
                 </div>
             </section>
@@ -127,15 +112,10 @@
                             <span class="text-sm text-blue-500 font-medium whitespace-nowrap">2023 – Present</span>
                         </div>
                         <ul class="cv-achievements">
-                            <li>Delivered <strong>enterprise-grade web portals</strong> for major Greek financial institutions, handling sensitive banking operations with strict security requirements</li>
-                            <li>Built complete web solutions using <strong>Sitecore XM</strong> as the CMS platform, implementing custom components, templates, and content workflows</li>
-                            <li>Developed <strong>role-based authentication systems</strong> and secure login flows integrated with client identity providers</li>
-                            <li>Created interactive features including <strong>map integrations</strong>, financial calculators, and dynamic product catalogs</li>
-                            <li>Implemented responsive front-end interfaces using <strong>Angular</strong> and modern CSS frameworks ensuring cross-browser compatibility</li>
-                            <li>Applied <strong>SEO best practices</strong> including semantic HTML, meta tags optimization, structured data, and performance tuning for search engine visibility</li>
-                            <li>Ensured <strong>WCAG accessibility compliance</strong> with proper ARIA attributes, keyboard navigation, screen reader support, and color contrast standards</li>
-                            <li>Designed <strong>SQL Server</strong> database queries using Views and Stored Procedures for efficient data retrieval and reporting</li>
-                            <li>Collaborated with backend teams on <strong>.NET service development</strong> and RESTful API integration</li>
+                            <li>Delivered <strong>enterprise banking portals</strong> for major Greek financial institutions using <strong>Sitecore XM</strong>, Angular, and .NET</li>
+                            <li>Developed <strong>role-based authentication</strong>, map integrations, financial calculators, and dynamic product catalogs</li>
+                            <li>Applied <strong>SEO best practices</strong> and <strong>WCAG accessibility compliance</strong> achieving improved search visibility and inclusivity</li>
+                            <li>Developed <strong>.NET backend services</strong> and RESTful APIs, designed <strong>SQL Server</strong> queries, and integrated client APIs with external systems</li>
                         </ul>
                     </div>
                 </div>
@@ -143,109 +123,85 @@
 
             <!-- Projects -->
             <section>
-                <h2 class="cv-section-title">Personal Projects</h2>
-                <div class="space-y-5">
+                <h2 class="cv-section-title">Projects</h2>
+                <div class="cv-projects-grid">
                     <!-- NexusChat -->
                     <div class="cv-experience-item">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-1">
                             <div>
-                                <h3 class="font-bold text-base text-blue-900">NexusChat – AI Chatbot & Decentralized App</h3>
-                                <p class="text-accent font-medium text-sm">React · .NET · Sui Blockchain · Thesis Project</p>
+                                <h3 class="font-bold text-sm text-blue-900">NexusChat – AI Chatbot & Decentralized App</h3>
+                                <p class="text-accent font-medium text-xs">React · .NET · Sui Blockchain · Thesis</p>
                             </div>
-                            <span class="text-sm text-blue-500 font-medium whitespace-nowrap">2024 – 2025</span>
+                            <span class="text-xs text-blue-500 font-medium whitespace-nowrap">2024 – 2025</span>
                         </div>
-                        <ul class="cv-achievements">
-                            <li>Developed a <strong>decentralized web application</strong> combining AI-powered chat with blockchain-based data ownership for my university thesis</li>
-                            <li>Integrated <strong>ChatGPT API</strong> for intelligent conversational AI supporting code generation and general knowledge queries</li>
-                            <li>Implemented <strong>Sui blockchain</strong> storage using Move smart contracts, ensuring user-owned encrypted data</li>
-                            <li>Built wallet-based authentication eliminating traditional username/password systems</li>
+                        <ul class="cv-achievements cv-achievements-compact">
+                            <li>Decentralized app combining <strong>ChatGPT API</strong> with <strong>Sui blockchain</strong> storage using Move smart contracts</li>
                         </ul>
                     </div>
 
                     <!-- Certed -->
                     <div class="cv-experience-item">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-1">
                             <div>
-                                <h3 class="font-bold text-base text-blue-900">Certed – Sitecore Certification Platform</h3>
-                                <p class="text-accent font-medium text-sm">Next.js · TypeScript · Tailwind CSS</p>
+                                <h3 class="font-bold text-sm text-blue-900">Certed – Sitecore Certification Platform</h3>
+                                <p class="text-accent font-medium text-xs">Next.js · TypeScript · Tailwind CSS</p>
                             </div>
-                            <a href="https://certed.vercel.app/" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">certed.vercel.app</a>
+                            <a href="https://certed.vercel.app/" target="_blank" rel="noopener" class="text-xs text-blue-500 font-medium whitespace-nowrap hover:underline">certed.vercel.app</a>
                         </div>
-                        <ul class="cv-achievements">
-                            <li>Created a <strong>study platform</strong> for Sitecore professionals preparing for certification exams</li>
-                            <li>Designed exam-aligned learning paths for XM Cloud, Content Cloud, and CDP/Personalize certifications</li>
-                            <li>Implemented <strong>SSR with Next.js</strong> for optimal SEO and performance</li>
+                        <ul class="cv-achievements cv-achievements-compact">
+                            <li>Study platform for Sitecore certification with <strong>SSR</strong> for SEO optimization</li>
                         </ul>
                     </div>
 
                     <!-- Fetchly -->
                     <div class="cv-experience-item">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-1">
                             <div>
-                                <h3 class="font-bold text-base text-blue-900">Fetchly – Developer News Aggregator</h3>
-                                <p class="text-accent font-medium text-sm">Next.js · TypeScript · Dev.to API</p>
+                                <h3 class="font-bold text-sm text-blue-900">Fetchly – Developer News Aggregator</h3>
+                                <p class="text-accent font-medium text-xs">Next.js · TypeScript · Dev.to API</p>
                             </div>
-                            <a href="https://fetchlynews.netlify.app" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">fetchlynews.netlify.app</a>
+                            <a href="https://fetchlynews.netlify.app" target="_blank" rel="noopener" class="text-xs text-blue-500 font-medium whitespace-nowrap hover:underline">fetchlynews.netlify.app</a>
                         </div>
-                        <ul class="cv-achievements">
-                            <li>Built a minimal web app for developers to explore tech articles with <strong>tag-based filtering</strong></li>
-                            <li>Implemented full <strong>server-side rendering</strong> for SEO optimization and fast initial loads</li>
+                        <ul class="cv-achievements cv-achievements-compact">
+                            <li>Tech article aggregator with <strong>tag-based filtering</strong> and server-side rendering</li>
                         </ul>
                     </div>
 
                     <!-- QuantumGiz -->
                     <div class="cv-experience-item">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-1">
                             <div>
-                                <h3 class="font-bold text-base text-blue-900">QuantumGiz – E-Commerce Platform</h3>
-                                <p class="text-accent font-medium text-sm">React · JavaScript · Tailwind CSS</p>
+                                <h3 class="font-bold text-sm text-blue-900">QuantumGiz – E-Commerce Platform</h3>
+                                <p class="text-accent font-medium text-xs">React · JavaScript · Tailwind CSS</p>
                             </div>
-                            <a href="https://quantumgiz.netlify.app" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">quantumgiz.netlify.app</a>
+                            <a href="https://quantumgiz.netlify.app" target="_blank" rel="noopener" class="text-xs text-blue-500 font-medium whitespace-nowrap hover:underline">quantumgiz.netlify.app</a>
                         </div>
-                        <ul class="cv-achievements">
-                            <li>Developed a <strong>mobile-first tech e-shop</strong> with dynamic shopping cart and real-time updates</li>
-                            <li>Implemented product gallery with filters and recommendation system for enhanced UX</li>
+                        <ul class="cv-achievements cv-achievements-compact">
+                            <li>Mobile-first e-shop with <strong>dynamic cart</strong> and product filtering</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Education -->
+            <!-- Education & Languages -->
             <section>
                 <h2 class="cv-section-title">Education</h2>
                 <div class="cv-experience-item">
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
                         <div>
-                            <h3 class="font-bold text-base text-blue-900">Bachelor of Science in Applied Informatics</h3>
-                            <p class="text-accent font-medium text-sm">University of Macedonia · Thessaloniki, Greece</p>
+                            <h3 class="font-bold text-sm text-blue-900">B.Sc. Applied Informatics</h3>
+                            <p class="text-accent font-medium text-xs">University of Macedonia · Thessaloniki, Greece</p>
                         </div>
-                        <span class="text-sm text-blue-500 font-medium whitespace-nowrap">Expected 2026</span>
+                        <span class="text-xs text-blue-500 font-medium whitespace-nowrap">Expected 2026</span>
                     </div>
-                    <p class="text-sm mt-2 text-blue-600"><strong class="text-blue-900">Thesis:</strong> "Development of a Web Application with Artificial Intelligence Chatbot and Decentralized Database" – NexusChat project integrating AI with Sui blockchain</p>
+                    <p class="text-xs mt-1 text-blue-600"><strong class="text-blue-900">Thesis:</strong> AI Chatbot with Decentralized Database (NexusChat)</p>
                 </div>
             </section>
 
             <!-- Languages -->
-            <section>
+            <section class="cv-section-inline">
                 <h2 class="cv-section-title">Languages</h2>
-                <div class="flex flex-wrap gap-4 text-sm">
-                    <div class="flex items-center gap-2">
-                        <span class="font-semibold text-blue-900">Greek</span>
-                        <span class="px-2 py-0.5 bg-blue-100 rounded text-xs text-blue-700">Native</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="font-semibold text-blue-900">English</span>
-                        <span class="px-2 py-0.5 bg-blue-100 rounded text-xs text-blue-700">Fluent</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Interests -->
-            <section>
-                <h2 class="cv-section-title">Interests</h2>
-                <p class="text-sm leading-relaxed text-blue-600">
-                    Blockchain & Web3 Technologies · AI/ML Applications · Open Source Contributions · Clean Code Architecture · UI/UX Design · Continuous Learning
-                </p>
+                <p class="text-sm text-blue-600"><strong class="text-blue-900">Greek</strong> (Native) · <strong class="text-blue-900">English</strong> (Fluent)</p>
             </section>
         </div>
     </article>
