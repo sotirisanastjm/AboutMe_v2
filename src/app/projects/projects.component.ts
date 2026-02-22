@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { SeoService } from '../services/seo.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,25 +7,15 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit{
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private readonly seoService: SeoService) { }
 
   ngOnInit(): void {
-    const metaTags = [
-      { name: 'description', content: 'Dive into the diverse projects I have developed, from innovative web apps to blockchain-based solutions. Explore my progress and stay updated on upcoming developments!' },
-      { name: 'keywords', content: 'Projects Gallery' },
-      { name: 'author', content: 'Sotiris Anastasiadis' }
-    ];
-
-    metaTags.forEach(tag => {
-      if (this.meta.getTag(`name="${tag.name}"`)) {
-        this.meta.removeTag(`name="${tag.name}"`);
-      }
+    this.seoService.update({
+      title: 'Projects | Sotiris Anastasiadis Portfolio',
+      description: 'Explore web projects by Sotiris Anastasiadis, including modern apps, AI experiments, and blockchain-based solutions.',
+      keywords: 'Projects Portfolio, Angular Projects, React Projects, Web Applications',
+      urlPath: '/projects',
+      image: '/assets/images/hero-image-quantumgiz.jpg'
     });
-
-    metaTags.forEach(tag => {
-      this.meta.addTag(tag);
-    });
-
-    this.title.setTitle('Anast.dev');
   }
 }

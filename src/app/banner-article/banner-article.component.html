@@ -7,7 +7,13 @@
     </div>
     <div [ngClass]="{'lg:grid-cols-2': data.Articles.length == 2, 'lg:grid-cols-3' : data.Articles.length >= 3, 'justify-items-center lg:w-1/2 lg:mx-auto' : data.Articles.length == 1}" class="grid grid-cols-1 gap-8">
         <ng-container *ngFor="let article of data?.Articles">
-            <a [href]="article?.File?.src" target="_blank" class="group rounded-2xl scale-card relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full border border-blue-200 dark:border-blue-700">
+            <a
+                [href]="article?.File?.src"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="article?.Title ? 'Open ' + article?.Title + ' resource in a new tab' : 'Open resource in a new tab'"
+                class="group rounded-2xl scale-card relative overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 w-full border border-blue-200 dark:border-blue-700"
+            >
                 <div class="relative !overflow-hidden min-h-[300px] lg:min-h-[400px] rounded-2xl text-white">
                     <img [src]="article?.Image?.src" [alt]="article?.Image?.alt" class="absolute w-full h-full object-cover inset-0 transition-transform duration-500 group-hover:scale-105" />
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/55 transition-all duration-300"></div>

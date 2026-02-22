@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { SeoService } from '../services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -8,25 +8,15 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomeComponent  implements OnInit{
 
-  constructor(private meta: Meta, private title: Title) {}
+  constructor(private readonly seoService: SeoService) {}
   
   ngOnInit(): void {
-    const metaTags = [
-      { name: 'description', content: 'I am Sotiris Anastasiadis, a dedicated front-end Angular developer located in Athens, Greece.' },
-      { name: 'keywords', content: 'Font-End Angular Developer' },
-      { name: 'author', content: 'Sotiris Anastasiadis' }
-    ];
-
-    metaTags.forEach(tag => {
-      if (this.meta.getTag(`name="${tag.name}"`)) {
-        this.meta.removeTag(`name="${tag.name}"`);
-      }
+    this.seoService.update({
+      title: 'Sotiris Anastasiadis | Front-End Angular Developer',
+      description: 'I am Sotiris Anastasiadis, a front-end Angular developer based in Athens, Greece, building performant and accessible web experiences.',
+      keywords: 'Sotiris Anastasiadis, Front-End Developer, Angular Developer, Web Developer Portfolio, Athens',
+      urlPath: '/',
+      image: '/assets/images/SotirisAnastasiadis.jpg'
     });
-
-    metaTags.forEach(tag => {
-      this.meta.addTag(tag);
-    });
-
-    this.title.setTitle('Anast.dev');
   }
 }
