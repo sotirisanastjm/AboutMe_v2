@@ -13,11 +13,27 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {}
 
   ngOnInit() {
+    this.printBrandingStamp();
+
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         window.scrollTo(0, 0);
       });
+  }
+
+  private printBrandingStamp(): void {
+    const styles = [
+      'color: #4CAF50',
+      'font-size: 14px',
+      'font-weight: bold',
+      'text-shadow: 1px 1px 2px rgba(0,0,0,0.2)'
+    ].join(';');
+
+    console.log(
+      '%c🚀 Crafted by Sotiris Anastasiadis | https://anast.dev',
+      styles
+    );
   }
 
 }
