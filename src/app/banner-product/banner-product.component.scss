@@ -1,52 +1,19 @@
-.projectCard:hover{
-    
-    .projectOut{
-        animation: FadeOut 0.2s linear forwards;
-        opacity: 0;
-        display: hidden;
-    }
+::ng-deep .cardSvg .techSvg {
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    border: none;
 
-    .projectIn{
-        animation: FadeIn 0.4s linear forwards;
-        opacity: 1;
-        display: block;
-    }
-    
-}
-
-.projectCard:not(:hover){
-    
-    .projectOut{
-        animation: FadeIn 0.3s linear backwards;
-        
-    }
-
-    .projectIn{
-        animation: FadeOut 0.3s linear backwards;
-        opacity: 0;
-        display: hidden;
-    }
-    
-}
-
-@keyframes FadeOut{
-    0%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    100%{
-        opacity: 0;
-        transform: translateY(-200px);
+    svg {
+        width: 22px !important;
+        height: 22px;
     }
 }
 
-@keyframes FadeIn{
-    0%{
-        opacity: 0;
-        transform: translateY(300px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

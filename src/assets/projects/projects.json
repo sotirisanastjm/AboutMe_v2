@@ -268,8 +268,8 @@
       "url": "../../assets/images/Certed.svg",
       "text": "Certed"
     },
-    "logoRight": true,
-    "onlyLogo": false,
+    "logoRight": false,
+    "onlyLogo": true,
     "cardImage": "../../assets/images/development.jpg",
     "alt": "Certed Sitecore Certification Prep Platform",
     "svgIds": [

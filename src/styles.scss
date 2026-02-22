@@ -8,7 +8,7 @@ body {
     @apply bg-white text-black w-full;
 
     p {
-        @apply text-[#526D82];
+        @apply text-[#636366];
     }
 
     h1,
@@ -27,14 +27,14 @@ body {
         @apply bg-dark-blue text-white;
 
         p {
-            @apply text-[#929AAB];
+            @apply text-[#aeaeb2];
         }
 
         h1,
         h2,
         h3,
         h4 {
-            @apply text-blue-300;
+            @apply text-blue-200;
         }
     }
 
@@ -44,10 +44,10 @@ body {
         }
     }
 
-    --banner-color: #DDE6ED;
+    --banner-color: #e5e5ea;
 
     &.dark {
-        --banner-color: #27374D;
+        --banner-color: #1c1c1e;
     }
 
     .banner-gradient {

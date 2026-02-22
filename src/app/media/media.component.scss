@@ -1,8 +1,15 @@
 .svgColor{
-    fill: #526D82;
+    fill: #3a3a3c;
+    transition: fill 0.2s ease;
+}
+:host:hover .svgColor {
+    fill: #c4856c;
 }
 .dark{
     .svgColor{
-        fill: #DDE6ED;
+        fill: #aeaeb2;
+    }
+    :host:hover .svgColor {
+        fill: #d4a08a;
     }
 }

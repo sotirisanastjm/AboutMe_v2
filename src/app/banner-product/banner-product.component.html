@@ -1,42 +1,51 @@
 <section class="banner-gradient-bottom pt-16 pb-10">
-  <div class="container mx-auto flex flex-col gap-8">
+  <div class="container mx-auto flex flex-col gap-10 px-4 lg:px-0">
 
-    <div class="space-y-4 text-center">
-      <h2 class="text-4xl font-bold text-blue-900">Explore My Work</h2>
-      <h3 class="text-2xl font-bold text-blue-700">Discover the Projects That Define My Skills</h3>
+    <div class="space-y-3 text-center">
+      <div class="w-10 h-[2px] bg-accent dark:bg-accent-dark mx-auto mb-4"></div>
+      <p class="uppercase tracking-[0.2em] text-accent dark:text-accent-dark text-xs font-bold">Portfolio</p>
+      <h2 class="text-2xl md:text-3xl font-bold">Explore My Work</h2>
+      <p class="text-base font-normal text-blue-600 dark:text-blue-400">Discover the Projects That Define My Skills</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 self-center justify-items-center gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 self-center gap-6 w-full max-w-[1200px]">
 
-      <a [routerLink]="['/projects', getId(project.id)]" *ngFor="let project of projects" class="relative h-[300px] max-w-[300px] w-full overflow-hidden rounded-3xl">
-        <img class="w-full h-full object-cover" [src]=" project.cardImage " [alt]="project.alt"/>
-        <div class="absolute inset-0 bg-blue-800 opacity-[0.15]"></div>
-        <div class="projectCard absolute inset-0 p-4 backdrop-blur-[2px] rounded-3xl z-10">
-          <div class="projectOut flex flex-col h-full w-full justify-between">
-            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">
-              <img *ngIf="project?.logoUrl?.url && !project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+      <a [routerLink]="['/projects', getId(project.id)]" *ngFor="let project of projects"
+         class="group relative overflow-hidden rounded-2xl bg-blue-100 dark:bg-blue-800 border border-blue-200 dark:border-blue-700 transition-all duration-300 hover:shadow-xl hover:border-accent/30 dark:hover:border-accent-dark/30">
+        
+        <!-- Image -->
+        <div class="relative h-[200px] overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+               [src]="project.cardImage" [alt]="project.alt"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          
+          <!-- Project name overlay on image -->
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-2 text-base text-[#faf8f5] font-bold items-center">
+              <img *ngIf="project?.logoUrl?.url && !project.logoRight" class="h-5 w-5 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
               {{project?.logoUrl?.text}}
-              <img *ngIf="project?.logoUrl?.url && project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
+              <img *ngIf="project?.logoUrl?.url && project.logoRight" class="h-5 w-5 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
             </h3>
-            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project?.logoUrl?.url" [alt]="project.alt"/>
-            <div class="mx-auto gap-2 flex flex-row justify-center items-center w-fit">
-              <ng-container *ngFor="let svg of project.svgIds; let index= index">
-                <ng-container *ngIf="index <= 2">
-                  <app-svg-list [svg]="svg.id"></app-svg-list>
-                </ng-container>
-              </ng-container>
-            </div>
-          </div>
-          <div class="projectIn absolute inset-0 p-4 backdrop-blur-[2px] rounded-3xl z-10 text-lg font-medium">
-            <h3 *ngIf="!project.onlyLogo" class="flex flex-row gap-1 text-xl text-white font-semibold items-center">
-              <img *ngIf="project?.logoUrl?.url && !project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
-              {{project?.logoUrl?.text}}
-              <img *ngIf="project?.logoUrl?.url && project.logoRight" class="h-8 w-8 object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt" />
-            </h3>
-            <img *ngIf="project.onlyLogo" class="h-1/4 w-fit object-cover" [src]=" project?.logoUrl?.url" [alt]="project.alt"/>
-            <p class="text-blue-200">{{project.description}}</p>
+            <img *ngIf="project.onlyLogo" class="h-6 w-fit object-cover" [src]="project?.logoUrl?.url" [alt]="project.alt"/>
           </div>
         </div>
+
+        <!-- Card body -->
+        <div class="p-4 flex flex-col gap-3">
+          <!-- Description -->
+          <p class="text-sm leading-relaxed line-clamp-3">{{project.description}}</p>
+          
+          <!-- Tech icons -->
+          <div class="flex flex-row items-center gap-1.5 pt-1 border-t border-blue-200 dark:border-blue-700">
+            <ng-container *ngFor="let svg of project.svgIds; let index = index">
+              <ng-container *ngIf="index <= 2">
+                <app-svg-list [svg]="svg.id" class="cardSvg"></app-svg-list>
+              </ng-container>
+            </ng-container>
+            <span class="ml-auto text-xs uppercase tracking-wider text-accent dark:text-accent-dark font-bold group-hover:translate-x-1 transition-transform duration-300">View →</span>
+          </div>
+        </div>
+
       </a>
 
     </div>

@@ -1,35 +1,55 @@
 .heroBtn {
-    @apply text-xl font-bold flex justify-center items-center cursor-pointer dark:bg-blue-300 bg-blue-700 dark:outline-[#DDE6ED] ; 
-    padding: 10px 15px;
-    gap: 15px;
-    outline: 3px #526D82 solid;
-    outline-offset: -3px;
-    border-radius: 5px;
+    @apply text-lg font-bold flex justify-center items-center cursor-pointer; 
+    padding: 12px 24px;
+    gap: 10px;
+    background-color: #c4856c;
+    border-radius: 6px;
     border: none;
-    transition: 400ms;
+    color: #faf8f5;
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .heroBtn .text {
-    @apply dark:text-blue-900 text-white;
+    color: #faf8f5;
     transition: 400ms;
 }
 
 .heroBtn:hover {
-    @apply dark:bg-dark-blue;
     background-color: transparent;
+    outline: 2px solid #c4856c;
+    outline-offset: -2px;
 }
 
 .heroBtn:hover .text {
-    @apply text-blue-700 dark:text-blue-300;
+    color: #c4856c;
+}
+
+.dark .heroBtn {
+    background-color: #d4a08a;
+    color: #0f0f0f;
+}
+
+.dark .heroBtn .text {
+    color: #0f0f0f;
+}
+
+.dark .heroBtn:hover {
+    background-color: transparent;
+    outline: 2px solid #d4a08a;
+    outline-offset: -2px;
+}
+
+.dark .heroBtn:hover .text {
+    color: #d4a08a;
 }
 
 .link-text {
   @apply flex relative;
   background-image: linear-gradient(
     to right,
-    #526D82,
-    #526D82 50%,
-    #000 50%
+    #c4856c,
+    #c4856c 50%,
+    #0f0f0f 50%
   );
   background-size: 200% 100%;
   background-position: 100%;
@@ -59,12 +79,14 @@
   
   
   .tooltiptext {
-    @apply dark:text-blue-900 text-white dark:bg-blue-300 bg-blue-700 font-bold;
+    @apply font-bold;
+    background-color: #3a3a3c;
+    color: #faf8f5;
     visibility: hidden;
     width: 160px;
     text-align: center;
-    border-radius: 8px;
-    padding: 5px;
+    border-radius: 6px;
+    padding: 6px 8px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -72,6 +94,12 @@
     margin-left: -80px;
     opacity: 0;
     transition: opacity 0.3s, transform 0.2s ease-out;
+    font-size: 0.8rem;
+  }
+
+  .dark .tooltiptext {
+    background-color: #e5e5ea;
+    color: #0f0f0f;
   }
   
   .tooltiptext::after {
@@ -82,10 +110,9 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    --border-color:#526D82;
+    --border-color: #3a3a3c;
     .dark &{
-        --border-color: #DDE6ED;
+        --border-color: #e5e5ea;
     }
     border-color: var(--border-color) transparent transparent transparent;
   }
-  

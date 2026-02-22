@@ -1,20 +1,32 @@
 .input-field{
     label{
-        @apply mb-1 font-bold text-sm text-blue-700 dark:text-blue-200 ;
+        @apply mb-1 font-bold text-sm text-blue-700 dark:text-blue-300 ;
     }
 
     input,
     textarea{
         @apply w-full text-sm sm:text-lg md:text-xl p-2 rounded-md text-blue-900 dark:text-blue-200 bg-blue-100 dark:bg-blue-800;
+        border: 1px solid #e5e5ea;
         
         &:focus{
             @apply outline-none;
+            border-color: #c4856c;
+        }
+    }
+
+    .dark & {
+        input,
+        textarea {
+            border-color: #3a3a3c;
+            &:focus {
+                border-color: #d4a08a;
+            }
         }
     }
 
     &:has(textarea){
         span{
-            @apply font-bold text-xs text-blue-700 dark:text-blue-200 ;
+            @apply font-bold text-xs text-blue-600 dark:text-blue-300 ;
         }    
        
     }

@@ -1,33 +1,42 @@
-<div class="h-[600px] relative" *ngIf="project && project?.heroImage">
-    <img class="h-[600px] w-full object-cover" [src]="project?.heroImage" [alt]="project?.name + 'Project'"/>
+<!-- Project Hero -->
+<div class="h-[550px] relative" *ngIf="project && project?.heroImage">
+    <img class="h-[550px] w-full object-cover" [src]="project?.heroImage" [alt]="project?.name + 'Project'"/>
     <div class="absolute flex w-full h-full items-center inset-0 bg-black/60 backdrop-blur-[6px] z-10">
-        <div class="sm:w-4/5 md:w-3/5 lg:w-1/2 space-y-4 px-4 md:px-8 lg:px-[120px]">
-            <h1 *ngIf="!project?.onlyLogo" class="text-[40px] text-blue-100 lg:text-4xl font-bold items-center flex flex-row gap-1">
+        <div class="sm:w-4/5 md:w-3/5 lg:w-1/2 space-y-5 px-4 md:px-8 lg:px-[120px]">
+            <p class="uppercase tracking-[0.2em] text-accent-dark text-xs font-bold">Project</p>
+            <h1 class="text-[36px] text-[#faf8f5] lg:text-4xl font-bold items-center flex flex-row gap-2">
                 <img *ngIf="project?.logoUrl?.url && !project?.logoRight" [src]="project?.logoUrl?.url" [alt]="project?.alt"/>
-                {{project?.logoUrl?.text}}
+                <span *ngIf="!project?.onlyLogo">{{project?.logoUrl?.text}}</span>
                 <img *ngIf="project?.logoUrl?.url && project?.logoRight" [src]="project?.logoUrl?.url" [alt]="project?.alt"/>
             </h1>
-            <p class="text-xl md:text-2xl text-blue-500 font-semibold">{{project?.description}}</p>
-            <a *ngIf="project?.link?.url" [href]="project?.link?.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
+            <p class="text-lg md:text-xl text-[#aeaeb2] leading-relaxed">{{project?.description}}</p>
+            <a *ngIf="project?.link?.url" [href]="project?.link?.url" target="_blank" class="heroBtn sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
         </div>
     </div>
 </div>
 
+<!-- Banner Section -->
 <section *ngIf="project?.bannerSection" class="banner-gradient pt-24 pb-14 mb-0">
     <div class="container mx-auto">
-        <div class="mx-4 lg:mx-0 flex flex-col lg:flex-row-reverse gap-8 justify-center">
-            <div class="space-y-6 w-full lg:w-[40%]">
-                <h3 class="text-2xl sm:text-4xl font-bold">{{ project?.bannerSection?.title }}</h3>
-                <p class="text-xl text-blue-800 dark:text-blue-100">{{ project?.bannerSection?.subtitle }}</p>
+        <div class="mx-4 lg:mx-0 flex flex-col lg:flex-row-reverse gap-10 justify-center items-center">
+            <div class="space-y-5 w-full lg:w-[45%]">
+                <p class="uppercase tracking-[0.2em] text-accent dark:text-accent-dark text-xs font-bold">About This Project</p>
+                <h3 class="text-2xl sm:text-3xl font-bold">{{ project?.bannerSection?.title }}</h3>
+                <p class="text-lg text-blue-600 dark:text-blue-300 leading-relaxed">{{ project?.bannerSection?.subtitle }}</p>
             </div>
-            <img class="self-center w-[60%] sm:w-[50%] lg:w-[30%]" [src]="project?.bannerSection?.ImageSrc" [alt]="project?.bannerSection?.ImageAlt"/>
+            <img class="self-center w-[55%] sm:w-[45%] lg:w-[28%]" [src]="project?.bannerSection?.ImageSrc" [alt]="project?.bannerSection?.ImageAlt"/>
         </div>
     </div>
 </section>
 
+<!-- Tech Stack -->
 <section class="container px-4 md:px-0 mx-auto mt-14 lg:mt-24">
-    <h2 class="text-center text-3xl sm:text-4xl mb-14 text-blue-800 dark:text-blue-400 font-bold">Built with Modern Web Technologies</h2>
-    <div *ngIf="project" class="mx-auto w-fit justify-center flex flex-wrap gap-10 lg:gap-14">
+    <div class="text-center mb-14">
+        <div class="w-10 h-[2px] bg-accent dark:bg-accent-dark mx-auto mb-5"></div>
+        <p class="uppercase tracking-[0.2em] text-accent dark:text-accent-dark text-xs font-bold mb-3">Tech Stack</p>
+        <h2 class="text-2xl sm:text-3xl font-bold">Built with Modern Web Technologies</h2>
+    </div>
+    <div *ngIf="project" class="mx-auto w-fit justify-center flex flex-wrap gap-8 lg:gap-12">
         <div class="tooltip" *ngFor="let svg of project?.svgIds">
             <app-svg-list class="flex h-full" [svg]="svg.id"></app-svg-list>
             <div class="tooltiptext">{{ svg.name }}</div>
@@ -35,47 +44,54 @@
     </div>
 </section>
 
+<!-- Info Cards -->
 <section *ngIf="project?.infoCards" class="container mx-auto px-4 lg:px-0">
-    <div class="flex flex-col lg:flex-row justify-center gap-12 w-full items-center lg:items-stretch">
-        <div *ngFor="let card of project?.infoCards" class="p-6 bg-blue-100 dark:bg-blue-800 dark:shadow-white/10 shadow-xl rounded-3xl flex flex-col sm:flex-row lg:flex-col gap-4 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px]">
-            <img *ngIf="card?.svg" class="h-[180px] object-fill mb-4" [src]="card?.svg" [alt]="card?.alt"/>
+    <div class="flex flex-col lg:flex-row justify-center gap-10 w-full items-center lg:items-stretch">
+        <div *ngFor="let card of project?.infoCards" class="p-7 bg-blue-100 dark:bg-blue-800 dark:shadow-blue-900/20 shadow-lg rounded-2xl flex flex-col sm:flex-row lg:flex-col gap-5 w-[90%] sm:w-full lg:w-[350px] 2xl:w-[400px] border border-blue-200 dark:border-blue-700 transition-transform duration-300 hover:scale-[1.02]">
+            <img *ngIf="card?.svg" class="h-[160px] object-fill mb-2" [src]="card?.svg" [alt]="card?.alt"/>
             <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4">{{ card?.title }}</h3>
-                <p class="text-lg">{{ card?.description }}</p>
+                <h3 class="text-xl font-bold mb-3">{{ card?.title }}</h3>
+                <p class="text-base leading-relaxed">{{ card?.description }}</p>
             </div>
         </div>
     </div>
-    
 </section>
 
+<!-- Articles -->
 <ng-container *ngIf="project?.articleSection">
     <app-banner-article [data]="project?.articleSection"></app-banner-article>
 </ng-container>
 
-
+<!-- Next Steps -->
 <section *ngIf="project?.nextSteps" class="banner-gradient pt-14 pb-14">
     <div class="container mx-auto">
-        <div class="mx-4 lg:mx-0 flex flex-col lg:flex-row gap-8 justify-center">
-            <div class="space-y-6 w-full lg:w-[40%]">
-                <h3 *ngIf="project?.nextStepTitle" class="text-2xl sm:text-4xl font-bold">{{project?.nextStepTitle}}</h3>
-                <ul class="text-lg text-blue-800 dark:text-blue-100 space-y-6">
+        <div class="mx-4 lg:mx-0 flex flex-col lg:flex-row gap-10 justify-center items-center">
+            <div class="space-y-6 w-full lg:w-[45%]">
+                <p class="uppercase tracking-[0.2em] text-accent dark:text-accent-dark text-xs font-bold">Roadmap</p>
+                <h3 *ngIf="project?.nextStepTitle" class="text-2xl sm:text-3xl font-bold">{{project?.nextStepTitle}}</h3>
+                <ul class="text-base text-blue-600 dark:text-blue-300 space-y-6">
                     <ng-container *ngFor="let step of project?.nextSteps">
-                        <li class="flex flex-col gap-2"> <span *ngIf="step?.title" class="text-xl font-bold">{{step?.title}}</span> {{step?.description}}</li>
+                        <li class="flex flex-col gap-2 border-l-2 border-accent dark:border-accent-dark pl-5">
+                            <span *ngIf="step?.title" class="text-lg font-bold">{{step?.title}}</span>
+                            <p class="leading-relaxed">{{step?.description}}</p>
+                        </li>
                     </ng-container>
-                    
                 </ul>
             </div>
-            <img class="self-center w-[80%] sm:w-[60%] lg:w-[40%]" [src]="project?.nextSvg" [alt]="project?.nextStepTitle"/>
+            <img class="self-center w-[70%] sm:w-[50%] lg:w-[35%]" [src]="project?.nextSvg" [alt]="project?.nextStepTitle"/>
         </div>
     </div>
 </section>
 
+<!-- Action Card -->
 <section *ngIf="project?.actionCard" class="container mx-auto px-4 lg:px-0 flex flex-col justify-center items-center w-fit text-center">
-    <h3 class="text-2xl md:text-4xl font-bold mb-2">{{project?.actionCard.title}}</h3>
-    <p class="text-xl md:text-2xl font-semibold mb-6">{{project?.actionCard.subtitle}}</p>
-    <a *ngIf="project?.link.url" [href]="project?.link.url" target="_blank" class="heroBtn dark:hover:bg-[transparent] w-full sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
+    <div class="w-10 h-[2px] bg-accent dark:bg-accent-dark mx-auto mb-6"></div>
+    <h3 class="text-2xl md:text-3xl font-bold mb-3">{{project?.actionCard.title}}</h3>
+    <p class="text-lg md:text-xl font-normal text-blue-600 dark:text-blue-400 mb-8 leading-relaxed">{{project?.actionCard.subtitle}}</p>
+    <a *ngIf="project?.link.url" [href]="project?.link.url" target="_blank" class="heroBtn w-full sm:w-3/6 mb-6"><div class="text">{{project?.link.text}}</div></a>
 </section>
 
+<!-- Progress Card -->
 <ng-container *ngIf="project?.progressCard && project?.inProgress">
     <app-progress-card [progressCard]="project?.progressCard"></app-progress-card>
 </ng-container>
