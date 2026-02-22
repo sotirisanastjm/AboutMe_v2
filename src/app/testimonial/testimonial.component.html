@@ -1,51 +1,64 @@
-<section class="container mx-auto">
-    <div class="flex lg:flex-row flex-col justify-around gap-8">
-        <div class="mx-4 sm:mx-0 flex flex-col lg:w-1/3 items-center">
-            <div class="relative rounded-2xl overflow-hidden">
-                <img src="../../assets/images/htmlImage.jpg" alt="Sotiris Anastasiadis" class="rounded-2xl overflow-hidden max-h-[400px] sm:max-h-[300px] md:max-h-[400px] h-auto">
+<section class="container mx-auto px-4 lg:px-0">
+    <div class="relative">
+
+        <!-- Decorative background panel -->
+        <div class="hidden lg:block absolute top-10 bottom-10 left-[32%] right-0 bg-blue-100 dark:bg-blue-800 rounded-3xl"></div>
+
+        <div class="flex lg:flex-row flex-col items-start gap-10 lg:gap-14 relative">
+
+            <!-- Illustration column -->
+            <div class="lg:w-[36%] w-full flex flex-col items-center justify-center self-center relative z-[1]">
+                <div class="relative">
+                    <div class="absolute -inset-6 bg-accent/10 dark:bg-accent-dark/15 rounded-full blur-2xl"></div>
+                    <img src="../../assets/images/SotirisAnastasiadisMemoji.png" alt="Sotiris Anastasiadis"
+                         class="relative rounded-full max-h-[240px] sm:max-h-[280px] md:max-h-[320px] w-auto border-[3px] border-blue-200 dark:border-blue-700 shadow-lg">
+                </div>
             </div>
-            <div class="-mt-32 ml-auto mr-auto">
-                <img src="../../assets/images/SotirisAnastasiadisMemoji.png" alt="Sotiris Anastasiadis" class="rounded-[100%] overflow-hidden max-h-[200px] sm:max-h-[250px] md:max-h-[300px] w-auto">
-            </div>
-        </div>
-        <div class="lg:w-2/3 mx-8 space-y-6">
-            <div>
-                <p class="uppercase tracking-[0.2em] text-accent dark:text-accent-dark text-sm font-bold mb-2">Background</p>
-                <h3 class="text-2xl lg:text-3xl font-bold">About Me</h3>
-            </div>
-            <div class="space-y-4">
-                <p class="text-lg leading-relaxed">
-                    Software Engineer with 3 years of experience at Ernst & Young, delivering enterprise-grade web solutions for Greece's leading financial institutions. Specializing in building secure, scalable banking portals from inception to production using Sitecore XM, Angular, and .NET.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Proven track record in full-stack development: custom Sitecore implementations, MVC architecture, role-based security systems, authentication flows, and end-to-end .NET service development. Delivered complete web portal solutions including custom login systems, map integrations, financial calculators, and product catalogs.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Currently completing my Applied Informatics degree while actively expanding my skill set through personal projects showcased in this portfolio. Passionate about clean code, modern web technologies, and continuous learning.
-                </p>
-            </div>
-            <div class="border-t border-blue-200 dark:border-blue-700 pt-6 flex sm:flex-row flex-col justify-between w-full gap-6">
-                <div class="flex flex-col space-y-4 sm:mb-0 mb-4">
-                    <div class="flex flex-col space-y-1">
-                        <h4 class="font-bold text-xs uppercase tracking-[0.15em] text-accent dark:text-accent-dark">Name</h4>
+
+            <!-- Content column -->
+            <div class="lg:w-[60%] w-full space-y-8 lg:py-12 lg:pr-8 relative z-[1]">
+
+                <!-- Section header -->
+                <div>
+                    <div class="w-10 h-[2px] bg-accent dark:bg-accent-dark mb-4"></div>
+                    <p class="uppercase tracking-[0.25em] text-accent dark:text-accent-dark text-xs font-bold mb-2">Background</p>
+                    <h3 class="text-3xl lg:text-4xl font-bold leading-tight">About Me</h3>
+                </div>
+
+                <!-- Bio -->
+                <div class="space-y-5">
+                    <p class="text-lg leading-relaxed">
+                        Software Engineer with 3 years of experience at Ernst & Young, delivering enterprise-grade web solutions for Greece's leading financial institutions. Specializing in building secure, scalable banking portals from inception to production using Sitecore XM, Angular, and .NET.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Proven track record in full-stack development: custom Sitecore implementations, MVC architecture, role-based security systems, authentication flows, and end-to-end .NET service development. Delivered complete web portal solutions including custom login systems, map integrations, financial calculators, and product catalogs.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Currently completing my Applied Informatics degree while actively expanding my skill set through personal projects showcased in this portfolio. Passionate about clean code, modern web technologies, and continuous learning.
+                    </p>
+                </div>
+
+                <!-- Info grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                    <div class="flex flex-col gap-1.5 border-l-2 border-accent dark:border-accent-dark pl-4 py-2 bg-blue-100/50 dark:bg-blue-800/40 rounded-r-xl">
+                        <h4 class="font-bold text-[11px] uppercase tracking-[0.2em] text-accent dark:text-accent-dark">Name</h4>
                         <p class="font-semibold text-base">Sotiris Anastasiadis</p>
                     </div>
-                    <div class="flex flex-col space-y-1">
-                        <h4 class="font-bold text-xs uppercase tracking-[0.15em] text-accent dark:text-accent-dark">Email</h4>
+                    <div class="flex flex-col gap-1.5 border-l-2 border-accent dark:border-accent-dark pl-4 py-2 bg-blue-100/50 dark:bg-blue-800/40 rounded-r-xl">
+                        <h4 class="font-bold text-[11px] uppercase tracking-[0.2em] text-accent dark:text-accent-dark">Email</h4>
                         <p class="font-semibold text-base">{{'sotiris.anastjm@gmail.com'}}</p>
                     </div>
-                </div>
-                <div class="flex flex-col space-y-4">
-                    <div class="flex flex-col space-y-1">
-                        <h4 class="font-bold text-xs uppercase tracking-[0.15em] text-accent dark:text-accent-dark">Education</h4>
+                    <div class="flex flex-col gap-1.5 border-l-2 border-accent dark:border-accent-dark pl-4 py-2 bg-blue-100/50 dark:bg-blue-800/40 rounded-r-xl">
+                        <h4 class="font-bold text-[11px] uppercase tracking-[0.2em] text-accent dark:text-accent-dark">Education</h4>
                         <p class="font-semibold text-base">B.Sc. Applied Informatics (Final Year)</p>
                     </div>
-                    <div class="flex flex-col space-y-1">
-                        <h4 class="font-bold text-xs uppercase tracking-[0.15em] text-accent dark:text-accent-dark">Employment</h4>
+                    <div class="flex flex-col gap-1.5 border-l-2 border-accent dark:border-accent-dark pl-4 py-2 bg-blue-100/50 dark:bg-blue-800/40 rounded-r-xl">
+                        <h4 class="font-bold text-[11px] uppercase tracking-[0.2em] text-accent dark:text-accent-dark">Employment</h4>
                         <p class="font-semibold text-base"><b>Ernst&Young</b> Software Engineer</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
