@@ -256,7 +256,7 @@
     "name": "Certed",
     "description": "A focused Sitecore certification prep workspace that helps professionals study with exam-aligned resources and practical progress checkpoints.",
     "link": {
-      "url": "https://certed.dev/",
+      "url": "https://certed.vercel.app/",
       "text": "Start Learning"
     },
     "inProgress": false,
