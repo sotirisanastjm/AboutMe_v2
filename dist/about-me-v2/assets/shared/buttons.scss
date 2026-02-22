@@ -80,26 +80,35 @@
   
   .tooltiptext {
     @apply font-bold;
-    background-color: #3a3a3c;
+    background-color: #c4856c;
     color: #faf8f5;
     visibility: hidden;
-    width: 160px;
+    width: auto;
+    white-space: nowrap;
     text-align: center;
-    border-radius: 6px;
-    padding: 6px 8px;
+    border-radius: 100px;
+    padding: 5px 14px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: calc(100% + 10px);
     left: 50%;
-    margin-left: -80px;
+    transform: translateX(-50%) translateY(4px);
     opacity: 0;
-    transition: opacity 0.3s, transform 0.2s ease-out;
-    font-size: 0.8rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(196, 133, 108, 0.3);
+  }
+
+  .tooltip:hover .tooltiptext {
+    transform: translateX(-50%) translateY(0);
   }
 
   .dark .tooltiptext {
-    background-color: #e5e5ea;
-    color: #0f0f0f;
+    background-color: #d4a08a;
+    color: #0a0a0a;
+    box-shadow: 0 2px 8px rgba(212, 160, 138, 0.25);
   }
   
   .tooltiptext::after {
@@ -107,12 +116,12 @@
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    margin-left: -4px;
+    border-width: 4px;
     border-style: solid;
-    --border-color: #3a3a3c;
-    .dark &{
-        --border-color: #e5e5ea;
+    border-color: #c4856c transparent transparent transparent;
+
+    .dark & {
+        border-color: #d4a08a transparent transparent transparent;
     }
-    border-color: var(--border-color) transparent transparent transparent;
   }
