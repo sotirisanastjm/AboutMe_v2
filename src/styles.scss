@@ -4,6 +4,70 @@
 @import 'tailwindcss/utilities';
 @import '../src/assets/shared/all.scss';
 
+/* Print styles for CV PDF export */
+@media print {
+    app-navigation,
+    app-footer,
+    .skip-link,
+    .print-hidden {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: #0f0f0f !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-size: 11pt !important;
+    }
+
+    body.dark {
+        background: white !important;
+        color: #0f0f0f !important;
+    }
+
+    body p,
+    body.dark p {
+        color: #3a3a3c !important;
+    }
+
+    body h1,
+    body h2,
+    body h3,
+    body h4,
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4 {
+        color: #0f0f0f !important;
+    }
+
+    .cv-content {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 1.5rem !important;
+        border-radius: 0 !important;
+    }
+
+    .cv-section-title::before {
+        background-color: #c4856c !important;
+    }
+
+    .cv-achievements li::before {
+        color: #c4856c !important;
+    }
+
+    a[href] {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    @page {
+        margin: 0.75cm;
+        size: A4;
+    }
+}
+
 .skip-link {
     position: absolute;
     left: 1rem;

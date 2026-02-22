@@ -1,0 +1,26 @@
+.cv-section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e5ea;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0f0f0f;
+    &::before { content: ''; width: 4px; height: 20px; background: #c4856c; border-radius: 9999px; }
+}
+
+.cv-experience-item { position: relative; padding-left: 1rem; border-left: 2px solid #e5e5ea; }
+
+.cv-achievements { list-style: none; font-size: 0.875rem; color: #636366; }
+.cv-achievements li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; }
+.cv-achievements li::before { content: '▸'; position: absolute; left: 0; color: #c4856c; }
+.cv-achievements li strong { color: #0f0f0f; font-weight: 600; }
+
+@media print {
+    .cv-container { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+    .cv-section-title { page-break-after: avoid; }
+    .cv-experience-item { page-break-inside: avoid; }
+    .print-photo { width: 80px !important; height: 80px !important; }
+}

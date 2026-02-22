@@ -1,0 +1,252 @@
+<section class="cv-container container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
+    <!-- Export Button -->
+    <div class="print-hidden flex justify-between items-center mb-6">
+        <a routerLink="/" class="flex items-center gap-2 text-accent hover:opacity-80 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span class="font-medium">Back to Home</span>
+        </a>
+        <button 
+            (click)="exportToPdf()" 
+            class="flex items-center gap-2 px-5 py-2.5 bg-accent text-white rounded-lg hover:opacity-90 transition-opacity font-medium text-sm"
+            aria-label="Export CV as PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>Download PDF</span>
+        </button>
+    </div>
+
+    <!-- CV Content - Always Light Mode -->
+    <article class="cv-content bg-white rounded-xl shadow-lg border border-blue-200 text-black">
+        
+        <!-- Header Section -->
+        <header class="p-6 sm:p-8 border-b border-blue-200">
+            <div class="flex flex-col sm:flex-row gap-6">
+                <img 
+                    src="../../assets/images/SotirisAnastasiadis.jpg" 
+                    alt="Sotiris Anastasiadis" 
+                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-accent self-center sm:self-start print-photo">
+                <div class="text-center sm:text-left flex-1">
+                    <h1 class="text-2xl sm:text-3xl font-bold mb-1 text-blue-900">Sotiris Anastasiadis</h1>
+                    <p class="text-lg text-accent font-semibold mb-3">Software Engineer</p>
+                    
+                    <!-- Contact Info Grid -->
+                    <div class="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-2 text-sm text-blue-700">
+                        <a href="mailto:sotiris.anastjm@gmail.com" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>sotiris.anastjm&#64;gmail.com</span>
+                        </a>
+                        <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Athens, Greece</span>
+                        </span>
+                        <a href="https://anast.dev" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            <span>anast.dev</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sotiris-anastasiadis/" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/sotirisanastjm" target="_blank" rel="noopener" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-6 sm:p-8 space-y-8">
+            <!-- Professional Summary -->
+            <section>
+                <h2 class="cv-section-title">Professional Summary</h2>
+                <p class="leading-relaxed text-sm sm:text-base text-blue-600">
+                    Software Engineer with <strong class="text-blue-900">3+ years</strong> of experience at <strong class="text-blue-900">Ernst & Young</strong>, delivering enterprise-grade web solutions for Greece's leading financial institutions. Specializing in building secure, scalable banking portals from inception to production using <strong class="text-blue-900">Sitecore XM</strong>, <strong class="text-blue-900">Angular</strong>, and <strong class="text-blue-900">.NET</strong>. Proven track record in full-stack development including custom CMS implementations, MVC architecture, role-based security systems, and authentication flows. Passionate about clean code, modern web technologies, and continuous learning through personal projects.
+                </p>
+            </section>
+
+            <!-- Core Competencies / Skills -->
+            <section>
+                <h2 class="cv-section-title">Technical Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div>
+                        <h3 class="font-semibold text-sm mb-2 text-accent">Frontend Development</h3>
+                        <ul class="text-sm space-y-1 text-blue-600">
+                            <li>Angular</li>
+                            <li>React / Next.js</li>
+                            <li>TypeScript / JavaScript (ES6+)</li>
+                            <li>HTML5 / CSS3 / SCSS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-sm mb-2 text-accent">Backend & Database</h3>
+                        <ul class="text-sm space-y-1 text-blue-600">
+                            <li>Sitecore XM / XP</li>
+                            <li>.NET / C# / MVC</li>
+                            <li>SQL Server (Views, Stored Procedures)</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-sm mb-2 text-accent">Best Practices</h3>
+                        <ul class="text-sm space-y-1 text-blue-600">
+                            <li>SEO Optimization</li>
+                            <li>Web Accessibility (WCAG)</li>
+                            <li>Responsive Design</li>
+                            <li>Git / Azure DevOps</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section>
+                <h2 class="cv-section-title">Professional Experience</h2>
+                <div class="space-y-6">
+                    <!-- Ernst & Young -->
+                    <div class="cv-experience-item">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-blue-900">Software Engineer</h3>
+                                <p class="text-accent font-medium text-sm">Ernst & Young (EY) · Athens, Greece</p>
+                            </div>
+                            <span class="text-sm text-blue-500 font-medium whitespace-nowrap">2023 – Present</span>
+                        </div>
+                        <ul class="cv-achievements">
+                            <li>Delivered <strong>enterprise-grade web portals</strong> for major Greek financial institutions, handling sensitive banking operations with strict security requirements</li>
+                            <li>Built complete web solutions using <strong>Sitecore XM</strong> as the CMS platform, implementing custom components, templates, and content workflows</li>
+                            <li>Developed <strong>role-based authentication systems</strong> and secure login flows integrated with client identity providers</li>
+                            <li>Created interactive features including <strong>map integrations</strong>, financial calculators, and dynamic product catalogs</li>
+                            <li>Implemented responsive front-end interfaces using <strong>Angular</strong> and modern CSS frameworks ensuring cross-browser compatibility</li>
+                            <li>Applied <strong>SEO best practices</strong> including semantic HTML, meta tags optimization, structured data, and performance tuning for search engine visibility</li>
+                            <li>Ensured <strong>WCAG accessibility compliance</strong> with proper ARIA attributes, keyboard navigation, screen reader support, and color contrast standards</li>
+                            <li>Designed <strong>SQL Server</strong> database queries using Views and Stored Procedures for efficient data retrieval and reporting</li>
+                            <li>Collaborated with backend teams on <strong>.NET service development</strong> and RESTful API integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2 class="cv-section-title">Personal Projects</h2>
+                <div class="space-y-5">
+                    <!-- NexusChat -->
+                    <div class="cv-experience-item">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-blue-900">NexusChat – AI Chatbot & Decentralized App</h3>
+                                <p class="text-accent font-medium text-sm">React · .NET · Sui Blockchain · Thesis Project</p>
+                            </div>
+                            <span class="text-sm text-blue-500 font-medium whitespace-nowrap">2024 – 2025</span>
+                        </div>
+                        <ul class="cv-achievements">
+                            <li>Developed a <strong>decentralized web application</strong> combining AI-powered chat with blockchain-based data ownership for my university thesis</li>
+                            <li>Integrated <strong>ChatGPT API</strong> for intelligent conversational AI supporting code generation and general knowledge queries</li>
+                            <li>Implemented <strong>Sui blockchain</strong> storage using Move smart contracts, ensuring user-owned encrypted data</li>
+                            <li>Built wallet-based authentication eliminating traditional username/password systems</li>
+                        </ul>
+                    </div>
+
+                    <!-- Certed -->
+                    <div class="cv-experience-item">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-blue-900">Certed – Sitecore Certification Platform</h3>
+                                <p class="text-accent font-medium text-sm">Next.js · TypeScript · Tailwind CSS</p>
+                            </div>
+                            <a href="https://certed.dev" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">certed.dev</a>
+                        </div>
+                        <ul class="cv-achievements">
+                            <li>Created a <strong>study platform</strong> for Sitecore professionals preparing for certification exams</li>
+                            <li>Designed exam-aligned learning paths for XM Cloud, Content Cloud, and CDP/Personalize certifications</li>
+                            <li>Implemented <strong>SSR with Next.js</strong> for optimal SEO and performance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Fetchly -->
+                    <div class="cv-experience-item">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-blue-900">Fetchly – Developer News Aggregator</h3>
+                                <p class="text-accent font-medium text-sm">Next.js · TypeScript · Dev.to API</p>
+                            </div>
+                            <a href="https://fetchlynews.netlify.app" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">fetchlynews.netlify.app</a>
+                        </div>
+                        <ul class="cv-achievements">
+                            <li>Built a minimal web app for developers to explore tech articles with <strong>tag-based filtering</strong></li>
+                            <li>Implemented full <strong>server-side rendering</strong> for SEO optimization and fast initial loads</li>
+                        </ul>
+                    </div>
+
+                    <!-- QuantumGiz -->
+                    <div class="cv-experience-item">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-2">
+                            <div>
+                                <h3 class="font-bold text-base text-blue-900">QuantumGiz – E-Commerce Platform</h3>
+                                <p class="text-accent font-medium text-sm">React · JavaScript · Tailwind CSS</p>
+                            </div>
+                            <a href="https://quantumgiz.netlify.app" target="_blank" rel="noopener" class="text-sm text-blue-500 font-medium whitespace-nowrap hover:underline">quantumgiz.netlify.app</a>
+                        </div>
+                        <ul class="cv-achievements">
+                            <li>Developed a <strong>mobile-first tech e-shop</strong> with dynamic shopping cart and real-time updates</li>
+                            <li>Implemented product gallery with filters and recommendation system for enhanced UX</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2 class="cv-section-title">Education</h2>
+                <div class="cv-experience-item">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <div>
+                            <h3 class="font-bold text-base text-blue-900">Bachelor of Science in Applied Informatics</h3>
+                            <p class="text-accent font-medium text-sm">University of Macedonia · Thessaloniki, Greece</p>
+                        </div>
+                        <span class="text-sm text-blue-500 font-medium whitespace-nowrap">Expected 2025</span>
+                    </div>
+                    <p class="text-sm mt-2 text-blue-600"><strong class="text-blue-900">Thesis:</strong> "Development of a Web Application with Artificial Intelligence Chatbot and Decentralized Database" – NexusChat project integrating AI with Sui blockchain</p>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section>
+                <h2 class="cv-section-title">Languages</h2>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="font-semibold text-blue-900">Greek</span>
+                        <span class="px-2 py-0.5 bg-blue-100 rounded text-xs text-blue-700">Native</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-semibold text-blue-900">English</span>
+                        <span class="px-2 py-0.5 bg-blue-100 rounded text-xs text-blue-700">Fluent</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interests -->
+            <section>
+                <h2 class="cv-section-title">Interests</h2>
+                <p class="text-sm leading-relaxed text-blue-600">
+                    Blockchain & Web3 Technologies · AI/ML Applications · Open Source Contributions · Clean Code Architecture · UI/UX Design · Continuous Learning
+                </p>
+            </section>
+        </div>
+    </article>
+</section>

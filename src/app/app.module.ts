@@ -23,6 +23,7 @@ import { HeroComponent } from './hero/hero.component';
 import { BannerActionComponent } from './banner-action/banner-action.component';
 import { ProgressCardComponent } from './progress-card/progress-card.component';
 import { BannerArticleComponent } from './banner-article/banner-article.component';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BannerArticleComponent } from './banner-article/banner-article.componen
     HeroComponent,
     BannerActionComponent,
     ProgressCardComponent,
-    BannerArticleComponent
+    BannerArticleComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
