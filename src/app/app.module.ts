@@ -24,6 +24,7 @@ import { BannerActionComponent } from './banner-action/banner-action.component';
 import { ProgressCardComponent } from './progress-card/progress-card.component';
 import { BannerArticleComponent } from './banner-article/banner-article.component';
 import { CvComponent } from './cv/cv.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CvComponent } from './cv/cv.component';
     BannerActionComponent,
     ProgressCardComponent,
     BannerArticleComponent,
-    CvComponent
+    CvComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

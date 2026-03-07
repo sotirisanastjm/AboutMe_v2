@@ -1,0 +1,40 @@
+<section class="not-found">
+
+    <!-- Static 404 page -->
+    <div *ngIf="!gameActive" class="not-found__content">
+        <p class="not-found__label">Error</p>
+        <h1 class="not-found__code">404</h1>
+        <p class="not-found__message">The page you're looking for has drifted into the void.</p>
+        <a routerLink="/" class="not-found__home">Return Home</a>
+        <p class="not-found__hint" (click)="startGame()">Press <kbd>Space</kbd> to play Tetris</p>
+    </div>
+
+    <!-- Game view -->
+    <div *ngIf="gameActive" class="not-found__game">
+        <div class="not-found__hud">
+            <span class="not-found__score">{{ score }}</span>
+            <span *ngIf="highScore > 0" class="not-found__high">Best: {{ highScore }}</span>
+        </div>
+
+        <canvas #gameCanvas class="not-found__canvas"></canvas>
+
+        <!-- Touch controls (mobile) -->
+        <div class="not-found__controls">
+            <button (click)="onTouch('ArrowLeft')" class="not-found__ctrl" aria-label="Move left">←</button>
+            <button (click)="onTouch('ArrowDown')" class="not-found__ctrl" aria-label="Soft drop">↓</button>
+            <button (click)="onTouch('ArrowUp')" class="not-found__ctrl" aria-label="Rotate">↻</button>
+            <button (click)="onTouch('ArrowRight')" class="not-found__ctrl" aria-label="Move right">→</button>
+            <button (click)="onTouch('Space')" class="not-found__ctrl not-found__ctrl--wide" aria-label="Hard drop">Drop</button>
+        </div>
+
+        <!-- Game over overlay -->
+        <div *ngIf="gameOver" class="not-found__overlay">
+            <p class="not-found__overlay-title">Game Over</p>
+            <p class="not-found__overlay-score">Score: {{ score }}</p>
+            <p *ngIf="score === highScore && score > 0" class="not-found__overlay-record">New Record!</p>
+            <button (click)="startGame()" class="not-found__overlay-btn">Play Again</button>
+            <a routerLink="/" class="not-found__overlay-link">Return Home</a>
+        </div>
+    </div>
+
+</section>

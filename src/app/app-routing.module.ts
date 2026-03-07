@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectItemComponent } from './projects/project-item/project-item.component';
 import { CvComponent } from './cv/cv.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,8 +14,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent }, 
   { path: 'projects/:id', component: ProjectItemComponent },
   { path: 'cv', component: CvComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' }, // Default route
-  { path: '**', redirectTo: '' } 
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
