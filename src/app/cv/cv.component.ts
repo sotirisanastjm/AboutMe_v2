@@ -7,6 +7,9 @@ import { SeoService } from '../services/seo.service';
     styleUrls: ['./cv.component.scss']
 })
 export class CvComponent implements OnInit {
+    readonly workStartYear = 2023;
+    readonly experienceYearsLabel = `${new Date().getFullYear() - this.workStartYear}+ years`;
+
     constructor(private readonly seoService: SeoService) {}
 
     ngOnInit(): void {

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonial.component.scss']
 })
 export class TestimonialComponent implements OnInit{
+  readonly workStartYear = 2023;
+  readonly experienceYearsLabel = `${new Date().getFullYear() - this.workStartYear}+ years`;
 
   year: any;
 
